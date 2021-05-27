@@ -1,0 +1,79 @@
+DEFINE Battery USING id AND amountOfColumns AND amountOfFloors AND amountOfBasements AND amountOfElevatorPerColumn
+    SET ID TO id
+    SET status TO 'online'
+    SET columnsList TO EMPTY array
+    SET floorRequestButtonsList TO EMPTY array
+
+    SEQUENCE assignElevator AND requestedFloor AND direction 
+        SET chosenColumn TO CALL this findBestColumn RETURNING column
+        CHOOSE ELEVATOR IN THIS COLUMN
+        OPERATE DOORS
+        SEND ELEVATOR TO REQUESTED FLOOR
+        OPERATE DOORS
+        // assignElevator(requestedFloor, direction). It should return a Column and an Elevator objects
+        // findBestColumn(requestedFloor). It should return a Column object
+    ENDSEQUENCE
+    SEQUENCE findBestColumn AND requestedFloor 
+        LOOP over list OF columns OF Battery
+        check IF THE REQUESTED FLOOR IS INCLUDED IN THE LIST
+        choose this column
+        FOR EACH COLUMN IN THIS COLUMN LIST
+    ENDSEQUENCE
+    SEQUENCE findBestElevator AND requestedFloor 
+        LOOP over list OF columns OF Battery
+        check IF the requestedFloor is included in the list
+        check this column
+        FOR EACH column IN this columnList
+            IF column servedFloorList INCLUDE requestedFloor
+                RETURN column
+            ENDIF
+        ENDFOR
+    ENDSEQUENCE
+ENDDEFINE
+
+DEFINE Column USING id AND amountOfElevators AND servedFloors AND isBasement
+    SET ID TO id
+    SET status TO 'online'
+    SET servedFloors TO EMPTY array
+    SET isBasement TO yes
+    SET elevatorsList TO EMPTY array
+    SET callButtonsList TO EMPTY array
+
+    SEQUENCE findBestElevator
+        LOOP through elevatorList
+        IF elevator currentFloor EQUALS 1 
+        IF is elevator direction IS 'down' AND elevator is GREATER than 1
+        IF is elevator direction IS 'up' AND elevator is LESS than 1
+            if elevator is on floor 1
+            if elevator is going towards 1st floor       
+    ENDSEQUENCE
+ENDDEFINE
+
+DEFINE Elevator USING id AND floor
+    SET ID TO id
+    SET status TO 'online'
+    SET currentFloor TO 1
+    SET direction TO null
+    SET door TO NEW door WITH object
+    SET floorRequestsList TO EMPTY array
+    SET completedRequestsList TO EMPTY array
+ENDDEFINE
+
+DEFINE CallButton USING id AND floor AND direction
+    SET ID TO id
+    SET status TO 'online'
+    SET floor TO 1
+    SET direction TO null
+ENDDEFINE
+
+DEFINE FloorRequestButton USING id AND floor AND direction
+    SET ID TO id
+    SET status TO 'online'
+    SET floor TO 1
+    SET direction TO null
+ENDDEFINE
+
+DEFINE Door USING id 
+    SET ID TO id
+    SET status TO 'online'
+ENDDEFINE
