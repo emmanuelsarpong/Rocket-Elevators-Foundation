@@ -1,0 +1,32 @@
+<%= form_with(model: address_geocode, local: true) do |form| %>
+  <% if address_geocode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(address_geocode.errors.count, "error") %> prohibited this address_geocode from being saved:</h2>
+
+      <ul>
+      <% address_geocode.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longtitude %>
+    <%= form.text_field :longtitude %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
