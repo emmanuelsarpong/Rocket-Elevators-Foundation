@@ -1,0 +1,57 @@
+	# <%= form_with do |form| %>
+	# 				Form contents
+	# 			  <% end %>
+				  
+
+    #               <label> Customer list Type:</label>
+    #               <% @customer = Customer.all %>
+    #               <select id="customer_id" required class="form-control pointer" name="intervention[customer_id]>
+    #                   <option value="nulltest">--- Select ---</option>
+    #                   <% @customer.each do |customer| %>
+    #                       <option value="<%= customer.id %>">
+    #                           <% customer.company_name %>
+    #                       </option>
+    #                   <% end %>
+    #               </select>
+  
+    #               <label> Employee list Type:</label>
+    #               <select id="employee_id" required class="form-control pointer" name="intervention[employee_id]>
+    #                   <option value="nulltest">--- Select ---</option>
+    #                   <% @employee.each do |employee| %>
+    #                       <option value="<%= employee.id %>">
+    #                           <% employee.first_name %> <% employee.last_name %>
+    #                       </option>
+    #                   <% end %>
+    #               </select>
+  
+    #               <label> Building list Type:</label>
+    #               <select id="building_id" required class="form-control pointer" name="intervention[building_id]>
+    #                   <option value="nulltest">--- Select ---</option>
+    #               </select>
+  
+    #               <label> Battery list Type:</label>
+    #               <select id="battery_id" required class="form-control pointer" name="intervention[battery_id]>
+    #                   <option value="nulltest">--- Select ---</option>
+    #               </select>
+  
+    #               <label> Column list Type:</label>
+    #               <select id="column_id" required class="form-control pointer" name="intervention[column_id]>
+    #                   <option value="nulltest">--- Select ---</option>
+    #               </select>
+  
+    #               <label> Elevator list</label>
+    #               <select id="elevator_id" required class="form-control pointer" name="intervention[elevator_id]>
+    #                   <option value="nulltest">--- Select ---</option>
+    #               </select>
+  
+    #               <label> Description </label>
+    #               <input id="intervention_description" type ="text" value "" class="form-control pointer" name="intervention[report]>
+  
+  
+    #               <!-- JAVASCRIPT FILES -->
+  
+    #               <!-- PAGELEVEL SCRIPTS -->
+    #               <%= javascript_tag "window._token = '#{form_authenticity_token}'" %>
+    #               <%= javascript_include_tag "intervention" %>
+                
+    #             <script src="intervention.js"></script>

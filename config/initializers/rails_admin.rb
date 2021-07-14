@@ -1,6 +1,7 @@
 RailsAdmin.config do |config|
   require Rails.root.join('lib', 'watson.rb')
   require Rails.root.join('lib', 'maps.rb')
+  require Rails.root.join('lib', 'intervention.rb')
   ### Popular gems integration
 
   ## == Devise ==
@@ -36,6 +37,7 @@ RailsAdmin.config do |config|
     show_in_app
     watson
     maps
+    intervention
 
     ## With an audit adapter, you can add:
     # history_index

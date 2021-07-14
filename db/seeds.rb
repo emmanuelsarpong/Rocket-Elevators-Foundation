@@ -496,6 +496,24 @@ for i in ((nbAddr/2).floor+1)..nbAddr   # Loop Building*******************
         )
         puts elevator
       end
+
+      result = "Incomplete"
+      status = "Pending"
+      for _ in 1..4  #Loop Elevator in Column **********************
+        interventions = Intervention.create!(
+          Author: employees.id, 
+          CustomerID: customers.id, 
+          BuildingID: buildings.id, 
+          BatteryID: batteries.id, 
+          ColumnID: column.id,
+          ElevatorID: elevator.id, 
+          Start_Date: Faker::Date.forward(days: 23),
+          Result: result,
+          Report: Faker::Lorem.sentence(word_count: 4),
+          Status: status
+        )
+        puts elevator
+      end
     end
   end
 end

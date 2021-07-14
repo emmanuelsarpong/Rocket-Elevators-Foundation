@@ -22,3 +22,6 @@
 //= link slider.revolution/js/jquery.themepunch.tools.min.js
 //= require underscore
 //= require gmaps/google
+//= require jquery_ujs
+//= require intervention
+//= require_tree .

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :interventions
   resources :address_geocodes
   resources :leads
   resources :elevators
@@ -28,4 +29,11 @@ Rails.application.routes.draw do
 	post "/leads/create", to: "leads#create"
 
 	get "/watson/refreshaudio", to: "watson#refreshaudio"
+
+	get '/get_building_by_customer/:customer_id', to: 'customers#get_buildings_by_customers'  
+
+	get '/get_battery_by_building/:building_id', to: 'buildings#get_batteries_by_buildings' 
+
+	get '/get_column_by_battery/:battery_id', to: 'batteries#get_columns_by_batteries'  
+	
 end

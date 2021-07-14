@@ -41,3 +41,7 @@ en:
         title: "Maps"
         menu: "Maps"
         breadcrumb: "Maps"
+      Intervention:
+        title: "Intervention Form"
+        menu: "Intervention Form"
+        breadcrumb: "Intervention Form"

@@ -14,11 +14,11 @@ module RailsAdmin
         end
 
         register_instance_option :link_icon do
-			'icon-image'
-		end
+			    'icon-map'
+		    end
 
         register_instance_option :route_fragment do
-			'maps.html.erb'
+			    'maps.html.erb'
         end
       end
     end

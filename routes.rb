@@ -28,4 +28,9 @@ Rails.application.routes.draw do
 	post "/leads/create", to: "leads#create"
 
 	get "/watson/refreshaudio", to: "watson#refreshaudio"
+
+	get '/get_building_by_customer/:customer_id', to: 'customers#get_buildings_by_customers'  
+	# get '/customer_search' => 'customers#customers_search' 
+
+	# get '/interventions', to: 'interventions#index'
 end

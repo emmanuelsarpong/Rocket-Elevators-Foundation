@@ -128,6 +128,12 @@ class BuildingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def get_batteries_by_buildings
+    @battery = Battery.where("building_id = ?", params[:building_id])
+    respond_to do |format|
+      format.json { render :json => @battery }
+    end
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.

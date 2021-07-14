@@ -3,7 +3,7 @@ class CustomersController < ApplicationController
 
   # GET /customers or /customers.json
   def index
-    @customers = Customer.all
+    @customer = Customer.all
   end
 
   # GET /customers/1 or /customers/1.json
@@ -53,10 +53,25 @@ class CustomersController < ApplicationController
   def destroy
     @customer.destroy
     respond_to do |format|
-      format.html { redirect_to customers_url, notice: "Customer was successfully destroyed." }
+      format.html { redirect_to customer_url, notice: "Customer was successfully destroyed." }
       format.json { head :no_content }
     end
   end
+  def get_buildings_by_customers
+    @building = Building.where("customer_id = ?", params[:customer_id])
+    respond_to do |format|
+      format.json { render :json => @building }
+    end
+  end 
+ 
+
+
+  # def get_elevators_by_
+  #   @battery = Battery.where("building_id = ?", params[:building_id])
+  #   respond_to do |format|
+  #     format.json { render :json => @battery }
+  #   end
+  # end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -67,6 +82,23 @@ class CustomersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def customer_params
       params.require(:customer).permit(:CompanyName, :NameOfContact, :CompanyContactPhone, :EmailOfTheCompany, :CompanyDescription, :NameOfServiceTechAuthority, :TechAuhtorityPhone, :TechManagerServiceEmail)
+    end
+    # Populate dropdown menu list
+    def index
+    end
+  
+    def get_customers_by_location
+      @customer = Customer.where("location_id = ?", params[:location_id])
+      respond_to do |format|
+        format.json { render :json => @customer }
+      end
+    end 
+    def customer_search
+      if params[:location].present? && params[:location].strip != ""
+        @customer = Customer.where("location_id = ?", params[:location])
+      else
+        @customer = Customer.all
+      end
     end
 end
 

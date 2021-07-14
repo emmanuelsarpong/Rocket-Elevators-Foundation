@@ -55,6 +55,12 @@ class BatteriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def get_columns_by_batteries
+    @column = Column.where("battery_id = ?", params[:battery_id])
+    respond_to do |format|
+      format.json { render :json => @column }
+    end
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.

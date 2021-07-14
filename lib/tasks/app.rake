@@ -1,6 +1,11 @@
 require 'pg'
 
-con = PG::Connection.open(host: 'codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com', port: 5432, user: 'codeboxx', dbname:'RayanTaing_datawarehouse_development', password:'Codeboxx1!')
+con = PG::Connection.open(
+  host: Rails.configuration.database_configuration["datawarehouse_development"]["host"],
+  dbname: Rails.configuration.database_configuration["datawarehouse_development"]["database"],
+  password: Rails.configuration.database_configuration["datawarehouse_development"]["password"],
+  user: Rails.configuration.database_configuration["datawarehouse_development"]["username"]
+)
 
 #con = PG::Connection.open(host: 'localhost', port: 5432, user: 'postgres', dbname:'datawarehouse_development', password:'12345')
 
