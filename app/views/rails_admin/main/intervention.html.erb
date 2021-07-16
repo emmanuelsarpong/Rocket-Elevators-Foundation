@@ -15,7 +15,7 @@
 			<div class="container">
 				<br>
 
-				<%= form_with do |form| %>
+				<%= form_with(data:{turbolinks:false, remote:false}) do |form| %>
 
 					
 				
@@ -23,7 +23,7 @@
 				<div id="customer_id" class="col-md-4">
 					<label>Customer List:</label>
 					<% @customer = Customer.all %>
-					<select id="customer_id_selector" required class="form-control pointer" name="intervention[customer_id]">
+					<select id="customer_id_selector" required class="form-control pointer" name="intervention[CustomerID]">
 						<option value="nulltest">--- Select ---</option>
 						<% @customer.each do |customer| %>
 							<option value="<%= customer.id %>">
@@ -33,59 +33,43 @@
 						
 					</select>
 				</div>
-				<script>
-					$(document).on("change", "select#customer_id", function(e){
-						$.ajax({
-						url: "/intervention/refreshbuilding",
-						type: 'GET',
-						data: { id: customer_id },
-						success: function(data){
-							$.each(data, function(data).append(${
-								value: data_id,
-							}))
-						});
-					});
-				</script>
-				<div id="employee_id" class="col-md-4">
+				<div id="employee_id" class="col-md-4" >
 					<label>Employee List:</label>
 					<% @employee = Employee.all %>
-					<select id="employee_id_selector" required class="form-control pointer" name="intervention[employee_id]">
+					<select id="employee_id_selector" required class="form-control pointer" name="intervention[Author]">
 						<option value="nulltest">--- Select ---</option>
 						<% @employee.each do |employee| %>
 							<option value="<%= employee.id %>">
-								<%= employee.FirstName %> <% employee.LastName %>
+								<%= employee.FirstName %> <%= employee.LastName %>
 							</option>
 						<% end %>
 					</select>
 				</div>
 				<div id="building_id" class="col-md-4">
 					<label>Building List:</label>
-					<select id="building_id_selector" required class="form-control pointer" name="intervention[building_id]">
-						<option value="nulltest">--- Select ---</option>
+					<select id="building_id_selector" required class="form-control pointer" name="intervention[BuildingID]">
+						<option value="nulltest">--- None ---</option>
 					</select>
 					<br>
 				</div>
-				<div id="battery_id" class="col-md-4">
+				<div id="battery_id" class="col-md-4" >
 					<label>Battery List:</label>
-					<select id="battery_id_selector" required class="form-control pointer" name="intervention[battery_id]">
-						<option value="nulltest">--- Select ---</option>
+					<select id="battery_id_selector" required class="form-control pointer" name="intervention[BatteryID]">
+						<option value="nulltest">--- None ---</option>
 					</select>
 				</div>
-				<div id="column_id" class="col-md-4">
+				<div id="column_id" class="col-md-4" >
 					<label>Column List:</label>
-					<select id="column_id_selector" required class="form-control pointer" name="intervention[column_id]">
-						<option value="nulltest">--- Select ---</option>
+					<select id="column_id_selector" required class="form-control pointer" name="intervention[ColumnID]">
+						<option value="nulltest">--- None ---</option>
 					</select>
 				</div>
-				<div id="elevator_id" class="col-md-4">
+				<div id="elevator_id" class="col-md-4" >
 					<label>Elevator List:</label>
-					<select id="elevator_id_selector" required class="form-control pointer" name="intervention[elevator_id]">
-						<option value="nulltest">--- Select ---</option>
+					<select id="elevator_id_selector" required class="form-control pointer" name="intervention[ElevatorID]">
+						<option value="nulltest">--- None ---</option>
 					</select>
 				</div>
-				<div>
-				
-				</div>
 				<br>
 				<br>
 				<br>
@@ -94,9 +78,9 @@
 				<br>
 				<br>
 				<br>
-				<div id="description" class="col-md-4">
+				<div id="description" class="col-md-4" >
 					<label>Description:</label>
-					<textarea cols="100" id="person_description" name="person[description]" rows="4"></textarea>
+					<textarea cols="100" id="person_description" name="intervention[Report]" rows="4"></textarea>
 				</div>
 				<br>
 				<br>
@@ -107,7 +91,7 @@
 				<br>
 
 
-				<divid ="submit_button" class="col-md-4">
+				<div id ="submit_button" href="/interventions/create" class="col-md-4">
 					<%= submit_tag "Submit" %>
 				</div>
 				

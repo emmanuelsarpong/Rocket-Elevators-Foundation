@@ -55,7 +55,12 @@ class ColumnsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  def get_elevators_by_columns
+    @elevator = Elevator.where("column_id = ?", params[:column_id])
+    respond_to do |format|
+      format.json { render :json => @elevator }
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

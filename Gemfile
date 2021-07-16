@@ -20,6 +20,7 @@ gem 'async-websocket', '~> 0.8.0'
 gem "zendesk_api"
 gem 'oauth2'
 gem "figaro"
+gem "pry"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
@@ -72,6 +73,12 @@ group :development do
   gem 'capistrano-bundler', '>= 1.1.0'
   gem 'rvm1-capistrano3', require: false
   gem 'capistrano3-puma'
+  gem 'capistrano', '~> 3.10', require: false
+  gem 'capistrano-rails', '~> 1.4', require: false
+  gem 'capistrano-bundler', '>= 1.1.0'
+  gem 'rvm1-capistrano3', require: false
+  gem 'capistrano3-puma'
+
 end
 
 group :test do

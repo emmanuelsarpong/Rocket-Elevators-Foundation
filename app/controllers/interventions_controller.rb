@@ -3,7 +3,11 @@ class InterventionsController < ApplicationController
 
   # GET /interventions or /interventions.json
   def index
-    @intervention = Intervention.all
+    if params[:filter] == "pending"
+      @interventions = Intervention.where(Status: "Pending", Start_Date: nil)
+    else
+      @interventions = Intervention.all
+    end
   end
 
   # GET /interventions/1 or /interventions/1.json
@@ -67,4 +71,5 @@ class InterventionsController < ApplicationController
       params.require(:intervention).permit(:Author, :CustomerID, :BuildingID, :BatteryID, :ColumnID, :ElevatorID, :EmployeeID, :Start_Date, :End_Date, :Result, :Report, :Status)
     end
 end
+
 
