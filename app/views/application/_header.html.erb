@@ -57,12 +57,13 @@
 						</li>
 						
 						<% if has_role?(:admin) %>
-							<li><!-- ADMIN -->
+							<li><!-- BACK OFFICE -->
 								<a href="/admin" id="admin-nav">
-									ADMIN
+									BACK OFFICE
 								</a>
 							</li>
 						<% end %>
+
 						<% if user_signed_in? %> 
 							<li><!-- LOGOUT -->
 								<a href="/users/sign_out" data-method="delete" id="login-nav">
