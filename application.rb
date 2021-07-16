@@ -22,6 +22,22 @@ module Rocket
       end
     end
 
+  #   SLACK_NOTIFIER = Slack::Notifier.new (
+  #     "https://hooks.slack.com/services/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",
+  #     channel: "#api-weeks-team-nicolas"
+  # )
+
+
+    # require 'slack-notifier'
+
+    # notifier = Slack::Notifier.new "WEBHOOK_URL"
+    # notifier.ping "Hello World"
+    
+    # notifier.ping "Hello default"
+    # => will message "Hello default"
+    # => to the "#default" channel as 'notifier'
+    
+
     require 'zendesk_api'
     require 'oauth2'
     if ENV["ZENDESK_URL"] then
