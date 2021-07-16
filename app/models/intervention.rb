@@ -14,7 +14,7 @@ class Intervention < ApplicationRecord
     def notify_slack
         if $SlackClient
             text = <<~EOS
-                New Intervention id #{self.id} Created by #{self.employee.FirstName} #{self.employee.LastName}:
+                New Intervention ID #{self.id} created by #{self.employee.FirstName} #{self.employee.LastName}:
                 Customer Name: #{self.customer.CompanyName}
                 Building ID: #{self.building.id}
                 Battery ID: #{self.battery.id}
@@ -22,7 +22,7 @@ class Intervention < ApplicationRecord
                 Elevator ID: #{self.elevator.SerialNumber}
             EOS
 
-            $SlackClient.chat_postMessage(channel: '#elevator_operations', text: text, as_user: true)
+            $SlackClient.chat_postMessage(channel: '#interventions', text: text, as_user: true)
         end
     end
 
