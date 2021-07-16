@@ -134,7 +134,7 @@ $('#column_id_selector').change(function(){
                 alert('failed to submit: ' + errorTextStatus + ';' + error);
             },
             success: function(data){
-                console.log(data, "data")
+                console.log(data, "data");
 
                 $('#elevator_id_selector option').remove();
 

@@ -17,6 +17,7 @@ class Elevator < ApplicationRecord
         end
     end
 
+
     def send_sms()
         if (self.saved_change_to_Status? && self.Status == "Intervention") && (ENV['TWILIO_ACCOUNT_SID'] && ENV['TWILIO_AUTH_TOKEN'] && ENV['TWILIO_ACCOUNT_PHONENUMBER'] && ENV['TWILIO_TARGET_PHONENUMBER'])
             

@@ -3,11 +3,11 @@ class InterventionsController < ApplicationController
 
   # GET /interventions or /interventions.json
   def index
-    if params[:filter] == "pending"
-      @interventions = Intervention.where(Status: "Pending", Start_Date: nil)
-    else
+    # if params[:filter] == "pending"
+    #   @interventions = Intervention.where(Status: "Pending", Start_Date: nil)
+    # else
       @interventions = Intervention.all
-    end
+    # end
   end
 
   # GET /interventions/1 or /interventions/1.json
