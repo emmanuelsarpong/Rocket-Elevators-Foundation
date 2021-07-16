@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @address_geocode.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @address_geocode.latitude %>
+</p>
+
+<p>
+  <strong>Longtitude:</strong>
+  <%= @address_geocode.longtitude %>
+</p>
+
+<%= link_to 'Edit', edit_address_geocode_path(@address_geocode) %> |
+<%= link_to 'Back', address_geocodes_path %>

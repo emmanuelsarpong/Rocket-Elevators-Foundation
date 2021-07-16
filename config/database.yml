@@ -1,0 +1,35 @@
+default: &default
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  
+development:
+  <<: *default
+  username: root
+  password:
+  adapter: mysql2
+  encoding: utf8
+  # socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
+  database: rocket_development
+
+production:
+  <<: *default
+  database: rocket_production
+  username: rocket
+  password: <%= ENV['ROCKET_DATABASE_PASSWORD'] %>
+
+datawarehouse_development:
+  <<: *default
+  host: localhost
+  username: postgres
+  password: salutsalut
+  adapter: postgresql
+  encoding: unicode
+  database: datawarehouse_development
+
+datawarehouse_production:
+  <<: *default
+  username: postgres
+  adapter: postgresql
+  encoding: unicode
+  database: datawarehouse_production
+  url: <%= ENV['DATAWAREHOUSE_DATABASE_URL'] %>
