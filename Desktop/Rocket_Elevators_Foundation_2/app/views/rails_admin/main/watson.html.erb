@@ -1,0 +1,39 @@
+<body>
+
+<!-- audio_tag "watson.mp3", autoplay: false %>-->
+<!--<audio controls>-->
+<!--  <source src="app/assets/audio/watson.mp3" type="audio/mp3">-->
+<!--</audio>-->
+
+<%= audio_tag "/watson/refreshaudio", class: "audio-play" %> <!--controls: true-->
+<p class="btn btn-primary audioButton">Play Briefing</p>
+</br>
+<p>Please wait 2-6 seconds for the audio to process and play after clicking the button.</p>
+<%= javascript_tag "window._token = '#{form_authenticity_token}'" %>
+
+<script>
+
+    $(".audioButton").on("click", function() {
+	    // $.ajax({
+	    	// url:'/watson/refreshaudio',
+	    	// type:'POST',
+	    	// dataType:'json',
+	    	// data:{
+	    		// authenticity_token: window._token
+	    	// }
+	    	// success:function(data){
+	    	// 	alert("success!!!")
+	    	// 	console.log(data)
+	    	// },
+	    	// error:function(data){
+	    	// 	alert("failed!!!")
+	    	// 	console.log(data)
+	    	// }
+	    // });
+        $(".audio-play")[0].currentTime = 0;
+        return $(".audio-play")[0].play();
+        // else $("audio-play").pause();
+    });
+</script>
+
+</body>
