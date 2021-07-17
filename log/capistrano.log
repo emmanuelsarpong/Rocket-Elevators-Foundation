@@ -4,3 +4,38 @@
   INFO ---------------------------------------------------------------------------
   INFO [3f94ddcc] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
  DEBUG [3f94ddcc] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-16 21:53:48 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [23bc887f] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [23bc887f] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-16 21:54:59 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [99d9649e] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [99d9649e] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-16 22:07:07 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5ce77cdf] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [5ce77cdf] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-16 22:13:10 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1053920b] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [1053920b] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-16 23:31:59 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [37e97b1b] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [37e97b1b] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-17 08:25:21 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [308d0142] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [308d0142] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-17 08:28:27 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [43e368a2] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [43e368a2] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/

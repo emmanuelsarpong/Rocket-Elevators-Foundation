@@ -63,15 +63,7 @@ class CustomersController < ApplicationController
       format.json { render :json => @building }
     end
   end 
- 
 
-
-  # def get_elevators_by_
-  #   @battery = Battery.where("building_id = ?", params[:building_id])
-  #   respond_to do |format|
-  #     format.json { render :json => @battery }
-  #   end
-  # end 
 
   private
     # Use callbacks to share common setup or constraints between actions.

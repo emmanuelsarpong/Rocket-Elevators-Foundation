@@ -14,12 +14,12 @@ jQuery(document).ready(function(){
 
 });
 
-$('#customer_id').change(function(){
+$('#customer_id_selector').change(function(){
     var id_value_string = $(this).val();
     if (id_value_string == "") {
-        $('#building_id_selector option').remove();
+        $('#select#building_id option').remove();
         var row = '<option value=\'' + 'nullest' + '\' selected>' + '--- None ---' + '</option';
-        $(row).append('#building_id_select');
+        $(row).append('select#building_id');
     } else {
 
         $.ajax({
@@ -35,12 +35,12 @@ $('#customer_id').change(function(){
                 $('#building_id_selector option').remove();
 
                 var row = '<option value=\'' + 'nullest' + '\' selected>' + '--- None ---' + '</option>';
-                $('#building_id_selector').append(row);
+                $('select#building_id_selector').append(row);
                 console.log(data);
                 $.each(data, function(i,j){
                     // row = '<option value=\'' + j.id + '\'>' + j.id + '</option>';
                     row = '<option value=\'' + j.id + '\'>' + "Building with address ID: " + j.address_id+ '</option>';
-                    $('#building_id_selector').append(row);
+                    $('select#building_id_selector').append(row);
                 });
                 $('#building_id').show();
             }
@@ -49,13 +49,13 @@ $('#customer_id').change(function(){
     ShowHide();
 });
 
-$('#building_id').change(function(){
+$('#building_id_selector').change(function(){
     var id_value_string = $(this).val();
     console.log(id_value_string);
     if (id_value_string == "") {
         $('#battery_id_selector option').remove();
         var row = '<option value=\'' + 'nullest' + '\' selected>' + '--- None ---' + '</option';
-        $(row).append('#battery_id_selector');
+        $(row).append('select#battery_id');
     } else{
 
         $.ajax({
@@ -77,7 +77,6 @@ $('#building_id').change(function(){
                     row = '<option value=\'' + j.id + '\'>' + "Battery with ID: " + j.id + '</option>';
                     $('#battery_id_selector').append(row);
                 });
-                $('#battery_id_selectof').show();
             }
         });
     }
@@ -111,20 +110,19 @@ $('#battery_id_selector').change(function(){
                     row = '<option value=\'' + j.id + '\'>' + "Column with ID: " + j.id + '</option>';
                     $('#column_id_selector').append(row);
                 });
-                $('#column_id_selector').show();
             }
         });
     }
     ShowHide();
 });
 
-$('#column_id').change(function(){
+$('#column_id_selector').change(function(){
     var id_value_string = $(this).val();
     console.log(id_value_string, "id of column chosen");
     if (id_value_string == "") {
         $('#elevator_id_selector option').remove();
         var row = '<option value=\'' + 'nullest' + '\' selected>' + '--- None ---' + '</option';
-        $(row).append('#elevator_id_selector');
+        $(row).append('#elevator_id_selector option');
     } else{
         //Send request and update course dropdown
         $.ajax({

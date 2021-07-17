@@ -503,7 +503,7 @@ for i in ((nbAddr/2).floor+1)..nbAddr   # Loop Building*******************
         interventions = Intervention.create!(
           Author: employees.id, 
           CustomerID: customers.id, 
-          BuildingID: buildings.id, 
+          BuildingID: building.id, 
           BatteryID: batteries.id, 
           ColumnID: column.id,
           ElevatorID: elevator.id, 
