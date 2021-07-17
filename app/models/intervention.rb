@@ -10,7 +10,7 @@ class Intervention < ApplicationRecord
         self.Status = "Pending"
     end
     after_create :notify_slack
-    # after_create :create
+ 
     def notify_slack
         if $SlackClient
             text = <<~EOS
