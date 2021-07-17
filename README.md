@@ -16,5 +16,6 @@ gem "slack-notifier"
 gem 'slack-ruby-bot'
 gem 'slack-ruby-client'
 ```
-=============================================================================
-REST API link: git@github.com:emmanuelsarpong/Rocket_Elevators_REST_API.git
+
+REST API link: 
+git@github.com:emmanuelsarpong/Rocket_Elevators_REST_API.git
