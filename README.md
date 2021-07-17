@@ -1,7 +1,7 @@
 # Readme
 
-### What the slack API does?
-Sneds a message to slack once an intervention is created.
+### What the Slack API does?
+Sends a message to slack once an intervention is created.
 
 ### How to use
 Complete an intervention request.
