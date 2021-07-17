@@ -1,8 +1,5 @@
 # Readme
 
-<Details>
-<summary>SendGrid API</summary>
-
 ### What the slack API does?
 Sneds a message to slack once an intervention is created.
 
