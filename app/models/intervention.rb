@@ -9,18 +9,20 @@ class Intervention < ApplicationRecord
     before_create do
         self.Status = "Pending"
     end
+
     after_create :notify_slack
- 
+    
     def notify_slack
         if $SlackClient
-            text = <<~EOS
+            text = 
+                <<~EOS
                 New Intervention ID #{self.id} created by #{self.employee.FirstName} #{self.employee.LastName}:
                 Customer Name: #{self.customer.CompanyName}
                 Building ID: #{self.building.id}
                 Battery ID: #{self.battery.id}
                 Column ID: #{self.column.id}
                 Elevator ID: #{self.elevator.SerialNumber}
-            EOS
+              EOS
 
             $SlackClient.chat_postMessage(channel: '#interventions', text: text, as_user: true)
         end
