@@ -7,7 +7,8 @@ con = PG::Connection.open(
   user: Rails.configuration.database_configuration["datawarehouse_development"]["username"]
 )
 
-#con = PG::Connection.open(host: 'localhost', port: 5432, user: 'postgres', dbname:'datawarehouse_development', password:'12345')
+
+# con = PG::Connection.open(host: 'server=codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com;port=3306;database=emmanuelsarpong;uid=codeboxx;password=Codeboxx!')
 
 random_status = ["Pending", "InProgress", "Interrupted", "Resumed", "Complete"]
 random_result = ["Success", "Failure", "Incomplete"]

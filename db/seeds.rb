@@ -297,6 +297,19 @@ LastName: "Murray",
 Email: "jonathan.murray@codeboxx.biz",
 user: user)
 
+user = User.create!(
+email: "emmanuel.sarpong12@gmail.com",
+password:"codeboxx",
+password_confirmation:"codeboxx")
+user.add_role :admin
+
+employees=Employee.create!(
+Title: "Developer",
+FirstName: "Emmanuel",
+LastName: "Sarpong",
+Email: "emmanuel.sarpong12@gmail.com",
+user: user)
+
 for _ in 1..50 # Loop User*********************
   customers = User.create!(
     email: Faker::Internet.email,
@@ -503,7 +516,7 @@ for i in ((nbAddr/2).floor+1)..nbAddr   # Loop Building*******************
         interventions = Intervention.create!(
           Author: employees.id, 
           CustomerID: customers.id, 
-          BuildingID: buildings.id, 
+          BuildingID: building.id, 
           BatteryID: batteries.id, 
           ColumnID: column.id,
           ElevatorID: elevator.id, 
