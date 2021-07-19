@@ -11943,3 +11943,38 @@ While it's not a problem now, it could cause errors if you change the version of
  DEBUG [945a0717] Command: cd /home/ubuntu/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb restart )
  DEBUG [945a0717] 	Command restart sent success
   INFO [945a0717] Finished in 1.449 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-18 22:23:07 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [976b0793] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [976b0793] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO [976b0793] Finished in 0.661 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [d471ef33] Running /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as ubuntu@99.79.123.96
+ DEBUG [d471ef33] Command: /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [d471ef33] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [6ac00f8f] Running /usr/bin/env mkdir -p /tmp as ubuntu@99.79.123.96
+ DEBUG [6ac00f8f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6ac00f8f] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-159dbfc979c28bc3569e.sh 0.0%
+  INFO Uploading /tmp/git-ssh-159dbfc979c28bc3569e.sh 100.0%
+  INFO [cd7a3200] Running /usr/bin/env chmod 700 /tmp/git-ssh-159dbfc979c28bc3569e.sh as ubuntu@99.79.123.96
+ DEBUG [cd7a3200] Command: /usr/bin/env chmod 700 /tmp/git-ssh-159dbfc979c28bc3569e.sh
+  INFO [cd7a3200] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [6311ae35] Running [ -f /home/ubuntu/apps/emmanuelsarpong/repo/HEAD ] as ubuntu@99.79.123.96
+ DEBUG [6311ae35] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/repo/HEAD ]
+ DEBUG [6311ae35] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/emmanuelsarpong/repo
+ DEBUG [3900f87c] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [3900f87c] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [3900f87c] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [d6bb7578] Running /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git as ubuntu@99.79.123.96
+ DEBUG [d6bb7578] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-159dbfc979c28bc3569e.sh" ; /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git )
+  INFO [d6bb7578] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [0dc14b72] Running /usr/bin/env git remote update --prune as ubuntu@99.79.123.96
+ DEBUG [0dc14b72] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-159dbfc979c28bc3569e.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0dc14b72] 	Fetching origin
+ DEBUG [0dc14b72] 	remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git/'
+ DEBUG [0dc14b72] 	error: Could not fetch origin
