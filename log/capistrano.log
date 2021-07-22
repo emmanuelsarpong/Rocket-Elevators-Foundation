@@ -14703,3 +14703,905 @@ While it's not a problem now, it could cause errors if you change the version of
  DEBUG [290d42ac] 	remote: Invalid username or password.
 fatal: Authentication failed for 'https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git/'
  DEBUG [290d42ac] 	error: Could not fetch origin
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-20 05:34:34 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6d806d16] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [6d806d16] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO [6d806d16] Finished in 0.674 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [f77ae0b1] Running /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as ubuntu@99.79.123.96
+ DEBUG [f77ae0b1] Command: /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [f77ae0b1] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [6c443226] Running /usr/bin/env mkdir -p /tmp as ubuntu@99.79.123.96
+ DEBUG [6c443226] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6c443226] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-f41c08dbd381a6cffe47.sh 0.0%
+  INFO Uploading /tmp/git-ssh-f41c08dbd381a6cffe47.sh 100.0%
+  INFO [448bde99] Running /usr/bin/env chmod 700 /tmp/git-ssh-f41c08dbd381a6cffe47.sh as ubuntu@99.79.123.96
+ DEBUG [448bde99] Command: /usr/bin/env chmod 700 /tmp/git-ssh-f41c08dbd381a6cffe47.sh
+  INFO [448bde99] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [8023268e] Running [ -f /home/ubuntu/apps/emmanuelsarpong/repo/HEAD ] as ubuntu@99.79.123.96
+ DEBUG [8023268e] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/repo/HEAD ]
+ DEBUG [8023268e] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/emmanuelsarpong/repo
+ DEBUG [7dddbe53] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [7dddbe53] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [7dddbe53] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [7ca9a7f0] Running /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git as ubuntu@99.79.123.96
+ DEBUG [7ca9a7f0] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f41c08dbd381a6cffe47.sh" ; /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git )
+  INFO [7ca9a7f0] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [8f4feb06] Running /usr/bin/env git remote update --prune as ubuntu@99.79.123.96
+ DEBUG [8f4feb06] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f41c08dbd381a6cffe47.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8f4feb06] 	Fetching origin
+ DEBUG [8f4feb06] 	From https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation
+   4ecc506..347a92b  main       -> main
+  INFO [8f4feb06] Finished in 0.838 seconds with exit status 0 (successful).
+ DEBUG [f890c117] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [f890c117] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [f890c117] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [87e74dfb] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 as ubuntu@99.79.123.96
+ DEBUG [87e74dfb] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f41c08dbd381a6cffe47.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 )
+  INFO [87e74dfb] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [ac46cda1] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 as ubuntu@99.79.123.96
+ DEBUG [ac46cda1] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f41c08dbd381a6cffe47.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 )
+  INFO [ac46cda1] Finished in 0.932 seconds with exit status 0 (successful).
+ DEBUG [5f6522e3] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [5f6522e3] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [5f6522e3] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [a4bc8ee1] Running /usr/bin/env git rev-list --max-count=1 main as ubuntu@99.79.123.96
+ DEBUG [a4bc8ee1] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f41c08dbd381a6cffe47.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [a4bc8ee1] 	347a92b0863b3bdbdec1d1d0a085dbd61c68debe
+ DEBUG [a4bc8ee1] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [00417cc9] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [00417cc9] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi
+ DEBUG [00417cc9] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [844eceab] Running /usr/bin/env echo "347a92b0863b3bdbdec1d1d0a085dbd61c68debe" > REVISION as ubuntu@99.79.123.96
+ DEBUG [844eceab] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /usr/bin/env echo "347a92b0863b3bdbdec1d1d0a085dbd61c68debe" > REVISION
+  INFO [844eceab] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [50c112d5] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config as ubuntu@99.79.123.96
+ DEBUG [50c112d5] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config
+  INFO [50c112d5] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [caf399b5] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [caf399b5] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/database.yml ]
+ DEBUG [caf399b5] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [7e9678ce] Running [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [7e9678ce] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/database.yml ]
+ DEBUG [7e9678ce] Finished in 0.014 seconds with exit status 1 (failed).
+  INFO [a87e65fa] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/database.yml as ubuntu@99.79.123.96
+ DEBUG [a87e65fa] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/database.yml
+  INFO [a87e65fa] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [643bfc81] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [643bfc81] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/application.yml ]
+ DEBUG [643bfc81] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [b28911ab] Running [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [b28911ab] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/application.yml ]
+ DEBUG [b28911ab] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [97230729] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/application.yml as ubuntu@99.79.123.96
+ DEBUG [97230729] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/config/application.yml
+  INFO [97230729] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [d6253f0f] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public as ubuntu@99.79.123.96
+ DEBUG [d6253f0f] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public
+  INFO [d6253f0f] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [5b4ed57e] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/pids ] as ubuntu@99.79.123.96
+ DEBUG [5b4ed57e] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/pids ]
+ DEBUG [5b4ed57e] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [385dc2b7] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/pids ] as ubuntu@99.79.123.96
+ DEBUG [385dc2b7] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/pids ]
+ DEBUG [385dc2b7] Finished in 0.056 seconds with exit status 1 (failed).
+  INFO [888cb0a9] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/pids as ubuntu@99.79.123.96
+ DEBUG [888cb0a9] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/pids
+  INFO [888cb0a9] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [0dce52ae] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/sockets ] as ubuntu@99.79.123.96
+ DEBUG [0dce52ae] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/sockets ]
+ DEBUG [0dce52ae] Finished in 0.057 seconds with exit status 1 (failed).
+ DEBUG [c4d34429] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/sockets ] as ubuntu@99.79.123.96
+ DEBUG [c4d34429] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/sockets ]
+ DEBUG [c4d34429] Finished in 0.014 seconds with exit status 1 (failed).
+  INFO [2b16ad74] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/sockets as ubuntu@99.79.123.96
+ DEBUG [2b16ad74] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/tmp/sockets
+  INFO [2b16ad74] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [3db1d7ab] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/log ] as ubuntu@99.79.123.96
+ DEBUG [3db1d7ab] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/log ]
+ DEBUG [3db1d7ab] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [435fb051] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/log ] as ubuntu@99.79.123.96
+ DEBUG [435fb051] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/log ]
+ DEBUG [435fb051] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [314c2f71] Running /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/log as ubuntu@99.79.123.96
+ DEBUG [314c2f71] Command: /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/log
+  INFO [314c2f71] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [0f709c5c] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/log as ubuntu@99.79.123.96
+ DEBUG [0f709c5c] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/log
+  INFO [0f709c5c] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [3c477c29] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets ] as ubuntu@99.79.123.96
+ DEBUG [3c477c29] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets ]
+ DEBUG [3c477c29] Finished in 0.015 seconds with exit status 1 (failed).
+ DEBUG [374dbeb2] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets ] as ubuntu@99.79.123.96
+ DEBUG [374dbeb2] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets ]
+ DEBUG [374dbeb2] Finished in 0.057 seconds with exit status 1 (failed).
+  INFO [9901d592] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/public/assets /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets as ubuntu@99.79.123.96
+ DEBUG [9901d592] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/public/assets /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets
+  INFO [9901d592] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [c69bdd8f] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [c69bdd8f] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi
+ DEBUG [c69bdd8f] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [aa87511f] Running /usr/bin/env /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh rvm --install install . as ubuntu@99.79.123.96
+ DEBUG [aa87511f] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /usr/bin/env /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh rvm --install install .
+ DEBUG [aa87511f] 	Warning, new version of rvm available '1.29.12', you are using older version '1.29.9'.
+You can disable this warning with:   echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable auto-update with:     echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+You can update manually with:        rvm get VERSION                         (e.g. 'rvm get stable')
+
+ DEBUG [aa87511f] 	Already installed ruby-2.6.6.
+To reinstall use:
+
+    rvm reinstall ruby-2.6.6
+
+  INFO [aa87511f] Finished in 0.589 seconds with exit status 0 (successful).
+  INFO [abe15d49] Running /usr/bin/env git ls-remote https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git HEAD as ubuntu@99.79.123.96
+ DEBUG [abe15d49] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f41c08dbd381a6cffe47.sh" ; /usr/bin/env git ls-remote https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git HEAD )
+ DEBUG [abe15d49] 	347a92b0863b3bdbdec1d1d0a085dbd61c68debe	HEAD
+  INFO [abe15d49] Finished in 0.407 seconds with exit status 0 (successful).
+  INFO [be04cfb6] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared /home/ubuntu/apps/emmanuelsarpong/releases as ubuntu@99.79.123.96
+ DEBUG [be04cfb6] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared /home/ubuntu/apps/emmanuelsarpong/releases
+  INFO [be04cfb6] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [765617f9] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/shared/public/assets as ubuntu@99.79.123.96
+ DEBUG [765617f9] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/shared/public/assets
+  INFO [765617f9] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [c6ba00a9] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/config as ubuntu@99.79.123.96
+ DEBUG [c6ba00a9] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/config
+  INFO [c6ba00a9] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [cb536fea] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [cb536fea] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml ]
+ DEBUG [cb536fea] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [f4fc2461] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [f4fc2461] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml ]
+ DEBUG [f4fc2461] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [12f7968e] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb ] as ubuntu@99.79.123.96
+ DEBUG [12f7968e] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb ]
+ DEBUG [12f7968e] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [b7bf60ee] Running [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/REVISION ] as ubuntu@99.79.123.96
+ DEBUG [b7bf60ee] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/REVISION ]
+ DEBUG [b7bf60ee] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [32b73fb4] Running /usr/bin/env cat /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/REVISION 2>/dev/null as ubuntu@99.79.123.96
+ DEBUG [32b73fb4] Command: /usr/bin/env cat /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/REVISION 2>/dev/null
+ DEBUG [32b73fb4] 	347a92b0863b3bdbdec1d1d0a085dbd61c68debe
+ DEBUG [32b73fb4] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [3f447335] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [3f447335] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi
+ DEBUG [3f447335] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [6b57892e] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local deployment true as ubuntu@99.79.123.96
+ DEBUG [6b57892e] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local deployment true
+ DEBUG [6b57892e] 	You are replacing the current local value of deployment, which is currently nil
+  INFO [6b57892e] Finished in 1.093 seconds with exit status 0 (successful).
+  INFO [a6ff21db] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local path /home/ubuntu/apps/emmanuelsarpong/shared/bundle as ubuntu@99.79.123.96
+ DEBUG [a6ff21db] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local path /home/ubuntu/apps/emmanuelsarpong/shared/bundle
+ DEBUG [a6ff21db] 	You are replacing the current local value of path, which is currently nil
+  INFO [a6ff21db] Finished in 1.023 seconds with exit status 0 (successful).
+  INFO [c92084be] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local without production as ubuntu@99.79.123.96
+ DEBUG [c92084be] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local without production
+ DEBUG [c92084be] 	You are replacing the current local value of without, which is currently nil
+  INFO [c92084be] Finished in 1.014 seconds with exit status 0 (successful).
+ DEBUG [375c3913] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [375c3913] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi
+ DEBUG [375c3913] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [f3a63a55] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle check as ubuntu@99.79.123.96
+ DEBUG [f3a63a55] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle check
+ DEBUG [f3a63a55] 	Your Gemfile lists the gem figaro (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [f3a63a55] 	Your Gemfile lists the gem capistrano (~> 3.10) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [f3a63a55] 	Your Gemfile lists the gem capistrano-rails (~> 1.4) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [f3a63a55] 	Your Gemfile lists the gem capistrano-bundler (>= 1.1.0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [f3a63a55] 	Your Gemfile lists the gem rvm1-capistrano3 (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+Your Gemfile lists the gem capistrano3-puma (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [f3a63a55] 	Your Gemfile lists the gem zendesk_api (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [f3a63a55] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [f3a63a55] 	The Gemfile's dependencies are satisfied
+ DEBUG [f3a63a55] Finished in 1.143 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [be37c3b0] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [be37c3b0] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi
+ DEBUG [be37c3b0] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [f4cda948] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile as ubuntu@99.79.123.96
+ DEBUG [f4cda948] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && ( export RAILS_ENV="development" RAILS_GROUPS="" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile )
+ DEBUG [f4cda948] 	yarn install v1.22.5
+ DEBUG [f4cda948] 	warning package-lock.json found. Your project contains lock files generated by tools other than Yarn. It is advised not to mix package managers in order to avoid resolution inconsistencies caused by unsynchronized lock files. To clear this warning, remove package-lock.json.
+ DEBUG [f4cda948] 	[1/4] Resolving packages...
+ DEBUG [f4cda948] 	[2/4] Fetching packages...
+ DEBUG [f4cda948] 	[3/4] Linking dependencies...
+ DEBUG [f4cda948] 	[4/4] Building fresh packages...
+ DEBUG [f4cda948] 	success Saved lockfile.
+ DEBUG [f4cda948] 	Done in 0.07s.
+  INFO [f4cda948] Finished in 13.785 seconds with exit status 0 (successful).
+ DEBUG [a8a010da] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [a8a010da] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi
+ DEBUG [a8a010da] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [c5faff6e] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/assets_manifest_backup as ubuntu@99.79.123.96
+ DEBUG [c5faff6e] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/assets_manifest_backup
+  INFO [c5faff6e] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [ebde7ae5] Running /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets/.sprockets-manifest* as ubuntu@99.79.123.96
+ DEBUG [ebde7ae5] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets/.sprockets-manifest*
+ DEBUG [ebde7ae5] 	/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json
+ DEBUG [ebde7ae5] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [7545233a] Running /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets/.sprockets-manifest* as ubuntu@99.79.123.96
+ DEBUG [7545233a] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets/.sprockets-manifest*
+ DEBUG [7545233a] 	/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json
+ DEBUG [7545233a] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [cce5b9d8] Running /usr/bin/env cp /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/assets_manifest_backup as ubuntu@99.79.123.96
+ DEBUG [cce5b9d8] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && /usr/bin/env cp /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434/assets_manifest_backup
+  INFO [cce5b9d8] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [ec33e126] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [ec33e126] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434'" 1>&2; false; fi
+ DEBUG [ec33e126] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [82121db4] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate as ubuntu@99.79.123.96
+ DEBUG [82121db4] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 && ( export RAILS_ENV="development" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate )
+  INFO [82121db4] Finished in 7.863 seconds with exit status 0 (successful).
+  INFO [9d61b89d] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 /home/ubuntu/apps/emmanuelsarpong/releases/current as ubuntu@99.79.123.96
+ DEBUG [9d61b89d] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/releases/20210720093434 /home/ubuntu/apps/emmanuelsarpong/releases/current
+  INFO [9d61b89d] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [a1bbf80e] Running /usr/bin/env mv /home/ubuntu/apps/emmanuelsarpong/releases/current /home/ubuntu/apps/emmanuelsarpong as ubuntu@99.79.123.96
+ DEBUG [a1bbf80e] Command: /usr/bin/env mv /home/ubuntu/apps/emmanuelsarpong/releases/current /home/ubuntu/apps/emmanuelsarpong
+  INFO [a1bbf80e] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [9ce617e5] Running /usr/bin/env ls -x /home/ubuntu/apps/emmanuelsarpong/releases as ubuntu@99.79.123.96
+ DEBUG [9ce617e5] Command: /usr/bin/env ls -x /home/ubuntu/apps/emmanuelsarpong/releases
+ DEBUG [9ce617e5] 	20210719152324	20210719162703	20210719213637	20210719223459	20210719223854
+20210720093434
+ DEBUG [9ce617e5] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 99.79.123.96
+ DEBUG [3491966d] Running [ -d /home/ubuntu/apps/emmanuelsarpong/current ] as ubuntu@99.79.123.96
+ DEBUG [3491966d] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/current ]
+ DEBUG [3491966d] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [7047c09f] Running /usr/bin/env readlink /home/ubuntu/apps/emmanuelsarpong/current as ubuntu@99.79.123.96
+ DEBUG [7047c09f] Command: /usr/bin/env readlink /home/ubuntu/apps/emmanuelsarpong/current
+ DEBUG [7047c09f] 	/home/ubuntu/apps/emmanuelsarpong/releases/20210720093434
+ DEBUG [7047c09f] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [fdbe3363] Running /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210719152324 as ubuntu@99.79.123.96
+ DEBUG [fdbe3363] Command: /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210719152324
+  INFO [fdbe3363] Finished in 0.312 seconds with exit status 0 (successful).
+ DEBUG [245e3a1b] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [245e3a1b] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases'" 1>&2; false; fi
+ DEBUG [245e3a1b] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [6290ca5f] Running /usr/bin/env echo "Branch main (at 347a92b0863b3bdbdec1d1d0a085dbd61c68debe) deployed as release 20210720093434 by emmanuelsarpong" >> /home/ubuntu/apps/emmanuelsarpong/revisions.log as ubuntu@99.79.123.96
+ DEBUG [6290ca5f] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases && /usr/bin/env echo "Branch main (at 347a92b0863b3bdbdec1d1d0a085dbd61c68debe) deployed as release 20210720093434 by emmanuelsarpong" >> /home/ubuntu/apps/emmanuelsarpong/revisions.log
+  INFO [6290ca5f] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [bc548373] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/current'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [bc548373] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/current'" 1>&2; false; fi
+ DEBUG [bc548373] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [65b356cc] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ] as ubuntu@99.79.123.96
+ DEBUG [65b356cc] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ]
+ DEBUG [65b356cc] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [0d76b693] Running /usr/bin/env kill -0 $( cat /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) as ubuntu@99.79.123.96
+ DEBUG [0d76b693] Command: cd /home/ubuntu/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /usr/bin/env kill -0 $( cat /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) )
+ DEBUG [0d76b693] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [d847a5ee] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb restart as ubuntu@99.79.123.96
+ DEBUG [d847a5ee] Command: cd /home/ubuntu/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb restart )
+ DEBUG [d847a5ee] 	Command restart sent success
+  INFO [d847a5ee] Finished in 1.326 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-20 06:09:45 -0400 cap production deploy:migrate
+  INFO ---------------------------------------------------------------------------
+  INFO [6cc2624a] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [6cc2624a] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO [6cc2624a] Finished in 0.605 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [310c1aec] Running /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as ubuntu@99.79.123.96
+ DEBUG [310c1aec] Command: /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [310c1aec] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [ed3d78ce] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/current'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [ed3d78ce] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/current'" 1>&2; false; fi
+ DEBUG [ed3d78ce] Finished in 0.012 seconds with exit status 0 (successful).
+  INFO [59934e63] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate as ubuntu@99.79.123.96
+ DEBUG [59934e63] Command: cd /home/ubuntu/apps/emmanuelsarpong/current && ( export RAILS_ENV="development" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate )
+  INFO [59934e63] Finished in 7.738 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-20 06:10:15 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2db16eac] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [2db16eac] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO [2db16eac] Finished in 0.713 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [acd8406e] Running /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as ubuntu@99.79.123.96
+ DEBUG [acd8406e] Command: /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [acd8406e] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [ec94873d] Running /usr/bin/env mkdir -p /tmp as ubuntu@99.79.123.96
+ DEBUG [ec94873d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ec94873d] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-5024bd999e148d066a0f.sh 0.0%
+  INFO Uploading /tmp/git-ssh-5024bd999e148d066a0f.sh 100.0%
+  INFO [0b138e3f] Running /usr/bin/env chmod 700 /tmp/git-ssh-5024bd999e148d066a0f.sh as ubuntu@99.79.123.96
+ DEBUG [0b138e3f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-5024bd999e148d066a0f.sh
+  INFO [0b138e3f] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [5e42c8d2] Running [ -f /home/ubuntu/apps/emmanuelsarpong/repo/HEAD ] as ubuntu@99.79.123.96
+ DEBUG [5e42c8d2] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/repo/HEAD ]
+ DEBUG [5e42c8d2] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/emmanuelsarpong/repo
+ DEBUG [3ba74134] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [3ba74134] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [3ba74134] Finished in 0.012 seconds with exit status 0 (successful).
+  INFO [8831df85] Running /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git as ubuntu@99.79.123.96
+ DEBUG [8831df85] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5024bd999e148d066a0f.sh" ; /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git )
+  INFO [8831df85] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [34f6dd0c] Running /usr/bin/env git remote update --prune as ubuntu@99.79.123.96
+ DEBUG [34f6dd0c] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5024bd999e148d066a0f.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [34f6dd0c] 	Fetching origin
+  INFO [34f6dd0c] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [ad24ea8d] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [ad24ea8d] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [ad24ea8d] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [a9c93101] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 as ubuntu@99.79.123.96
+ DEBUG [a9c93101] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5024bd999e148d066a0f.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 )
+  INFO [a9c93101] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [31e1d8bf] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 as ubuntu@99.79.123.96
+ DEBUG [31e1d8bf] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5024bd999e148d066a0f.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 )
+  INFO [31e1d8bf] Finished in 1.003 seconds with exit status 0 (successful).
+ DEBUG [ccab91ce] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [ccab91ce] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [ccab91ce] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [8ec94149] Running /usr/bin/env git rev-list --max-count=1 main as ubuntu@99.79.123.96
+ DEBUG [8ec94149] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5024bd999e148d066a0f.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [8ec94149] 	347a92b0863b3bdbdec1d1d0a085dbd61c68debe
+ DEBUG [8ec94149] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [064d7c95] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [064d7c95] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi
+ DEBUG [064d7c95] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [7df01373] Running /usr/bin/env echo "347a92b0863b3bdbdec1d1d0a085dbd61c68debe" > REVISION as ubuntu@99.79.123.96
+ DEBUG [7df01373] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /usr/bin/env echo "347a92b0863b3bdbdec1d1d0a085dbd61c68debe" > REVISION
+  INFO [7df01373] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [c56a7846] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config as ubuntu@99.79.123.96
+ DEBUG [c56a7846] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config
+  INFO [c56a7846] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [b7f7a55c] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [b7f7a55c] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/database.yml ]
+ DEBUG [b7f7a55c] Finished in 0.055 seconds with exit status 1 (failed).
+ DEBUG [3fd6ec76] Running [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [3fd6ec76] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/database.yml ]
+ DEBUG [3fd6ec76] Finished in 0.014 seconds with exit status 1 (failed).
+  INFO [b8069289] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/database.yml as ubuntu@99.79.123.96
+ DEBUG [b8069289] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/database.yml
+  INFO [b8069289] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [ed407adc] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [ed407adc] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/application.yml ]
+ DEBUG [ed407adc] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [985a8b6b] Running [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [985a8b6b] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/application.yml ]
+ DEBUG [985a8b6b] Finished in 0.057 seconds with exit status 1 (failed).
+  INFO [73e98252] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/application.yml as ubuntu@99.79.123.96
+ DEBUG [73e98252] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/config/application.yml
+  INFO [73e98252] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [6d9eb1c5] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public as ubuntu@99.79.123.96
+ DEBUG [6d9eb1c5] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public
+  INFO [6d9eb1c5] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [b632c6c8] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/pids ] as ubuntu@99.79.123.96
+ DEBUG [b632c6c8] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/pids ]
+ DEBUG [b632c6c8] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [eb5f2cc9] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/pids ] as ubuntu@99.79.123.96
+ DEBUG [eb5f2cc9] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/pids ]
+ DEBUG [eb5f2cc9] Finished in 0.057 seconds with exit status 1 (failed).
+  INFO [c24f4744] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/pids as ubuntu@99.79.123.96
+ DEBUG [c24f4744] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/pids
+  INFO [c24f4744] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [c5c890d9] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/sockets ] as ubuntu@99.79.123.96
+ DEBUG [c5c890d9] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/sockets ]
+ DEBUG [c5c890d9] Finished in 0.055 seconds with exit status 1 (failed).
+ DEBUG [ccd064a5] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/sockets ] as ubuntu@99.79.123.96
+ DEBUG [ccd064a5] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/sockets ]
+ DEBUG [ccd064a5] Finished in 0.015 seconds with exit status 1 (failed).
+  INFO [821fb754] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/sockets as ubuntu@99.79.123.96
+ DEBUG [821fb754] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/tmp/sockets
+  INFO [821fb754] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [858576fb] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/log ] as ubuntu@99.79.123.96
+ DEBUG [858576fb] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/log ]
+ DEBUG [858576fb] Finished in 0.016 seconds with exit status 1 (failed).
+ DEBUG [53fd8d77] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/log ] as ubuntu@99.79.123.96
+ DEBUG [53fd8d77] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/log ]
+ DEBUG [53fd8d77] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [32f7570c] Running /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/log as ubuntu@99.79.123.96
+ DEBUG [32f7570c] Command: /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/log
+  INFO [32f7570c] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [17bc988a] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/log as ubuntu@99.79.123.96
+ DEBUG [17bc988a] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/log
+  INFO [17bc988a] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [f469bdd4] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets ] as ubuntu@99.79.123.96
+ DEBUG [f469bdd4] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets ]
+ DEBUG [f469bdd4] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [e854747f] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets ] as ubuntu@99.79.123.96
+ DEBUG [e854747f] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets ]
+ DEBUG [e854747f] Finished in 0.057 seconds with exit status 1 (failed).
+  INFO [951c4c84] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/public/assets /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets as ubuntu@99.79.123.96
+ DEBUG [951c4c84] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/public/assets /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets
+  INFO [951c4c84] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [909f3cd1] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [909f3cd1] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi
+ DEBUG [909f3cd1] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [e9d58865] Running /usr/bin/env /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh rvm --install install . as ubuntu@99.79.123.96
+ DEBUG [e9d58865] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /usr/bin/env /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh rvm --install install .
+ DEBUG [e9d58865] 	Warning, new version of rvm available '1.29.12', you are using older version '1.29.9'.
+You can disable this warning with:   echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable auto-update with:     echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+You can update manually with:        rvm get VERSION                         (e.g. 'rvm get stable')
+
+ DEBUG [e9d58865] 	Already installed ruby-2.6.6.
+To reinstall use:
+
+    rvm reinstall ruby-2.6.6
+
+  INFO [e9d58865] Finished in 0.516 seconds with exit status 0 (successful).
+  INFO [e958072e] Running /usr/bin/env git ls-remote https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git HEAD as ubuntu@99.79.123.96
+ DEBUG [e958072e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-5024bd999e148d066a0f.sh" ; /usr/bin/env git ls-remote https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git HEAD )
+ DEBUG [e958072e] 	347a92b0863b3bdbdec1d1d0a085dbd61c68debe	HEAD
+  INFO [e958072e] Finished in 0.371 seconds with exit status 0 (successful).
+  INFO [064e48f5] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared /home/ubuntu/apps/emmanuelsarpong/releases as ubuntu@99.79.123.96
+ DEBUG [064e48f5] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared /home/ubuntu/apps/emmanuelsarpong/releases
+  INFO [064e48f5] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [dc66528d] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/shared/public/assets as ubuntu@99.79.123.96
+ DEBUG [dc66528d] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/shared/public/assets
+  INFO [dc66528d] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [3375eb43] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/config as ubuntu@99.79.123.96
+ DEBUG [3375eb43] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/config
+  INFO [3375eb43] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [89225c2e] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [89225c2e] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml ]
+ DEBUG [89225c2e] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [dec4edec] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [dec4edec] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml ]
+ DEBUG [dec4edec] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [f6540aaa] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb ] as ubuntu@99.79.123.96
+ DEBUG [f6540aaa] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb ]
+ DEBUG [f6540aaa] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [c331266a] Running [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/REVISION ] as ubuntu@99.79.123.96
+ DEBUG [c331266a] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/REVISION ]
+ DEBUG [c331266a] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [1f79e546] Running /usr/bin/env cat /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/REVISION 2>/dev/null as ubuntu@99.79.123.96
+ DEBUG [1f79e546] Command: /usr/bin/env cat /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/REVISION 2>/dev/null
+ DEBUG [1f79e546] 	347a92b0863b3bdbdec1d1d0a085dbd61c68debe
+ DEBUG [1f79e546] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [58f2febf] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [58f2febf] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi
+ DEBUG [58f2febf] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [f40539f2] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local deployment true as ubuntu@99.79.123.96
+ DEBUG [f40539f2] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local deployment true
+ DEBUG [f40539f2] 	You are replacing the current local value of deployment, which is currently nil
+  INFO [f40539f2] Finished in 1.121 seconds with exit status 0 (successful).
+  INFO [09a61a34] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local path /home/ubuntu/apps/emmanuelsarpong/shared/bundle as ubuntu@99.79.123.96
+ DEBUG [09a61a34] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local path /home/ubuntu/apps/emmanuelsarpong/shared/bundle
+ DEBUG [09a61a34] 	You are replacing the current local value of path, which is currently nil
+  INFO [09a61a34] Finished in 1.023 seconds with exit status 0 (successful).
+  INFO [7d5bc7e9] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local without production as ubuntu@99.79.123.96
+ DEBUG [7d5bc7e9] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local without production
+ DEBUG [7d5bc7e9] 	You are replacing the current local value of without, which is currently nil
+  INFO [7d5bc7e9] Finished in 1.021 seconds with exit status 0 (successful).
+ DEBUG [169943c1] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [169943c1] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi
+ DEBUG [169943c1] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [297a4014] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle check as ubuntu@99.79.123.96
+ DEBUG [297a4014] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle check
+ DEBUG [297a4014] 	Your Gemfile lists the gem figaro (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [297a4014] 	Your Gemfile lists the gem capistrano (~> 3.10) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [297a4014] 	Your Gemfile lists the gem capistrano-rails (~> 1.4) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [297a4014] 	Your Gemfile lists the gem capistrano-bundler (>= 1.1.0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [297a4014] 	Your Gemfile lists the gem rvm1-capistrano3 (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [297a4014] 	Your Gemfile lists the gem capistrano3-puma (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [297a4014] 	Your Gemfile lists the gem zendesk_api (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [297a4014] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [297a4014] 	The Gemfile's dependencies are satisfied
+ DEBUG [297a4014] Finished in 1.126 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [5a563e2f] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [5a563e2f] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi
+ DEBUG [5a563e2f] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [b111ee50] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile as ubuntu@99.79.123.96
+ DEBUG [b111ee50] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && ( export RAILS_ENV="development" RAILS_GROUPS="" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile )
+ DEBUG [b111ee50] 	yarn install v1.22.5
+ DEBUG [b111ee50] 	warning package-lock.json found. Your project contains lock files generated by tools other than Yarn. It is advised not to mix package managers in order to avoid resolution inconsistencies caused by unsynchronized lock files. To clear this warning, remove package-lock.json.
+ DEBUG [b111ee50] 	[1/4] Resolving packages...
+ DEBUG [b111ee50] 	[2/4] Fetching packages...
+ DEBUG [b111ee50] 	[3/4] Linking dependencies...
+ DEBUG [b111ee50] 	[4/4] Building fresh packages...
+ DEBUG [b111ee50] 	success Saved lockfile.
+ DEBUG [b111ee50] 	Done in 0.07s.
+  INFO [b111ee50] Finished in 13.592 seconds with exit status 0 (successful).
+ DEBUG [1ea5d28f] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [1ea5d28f] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi
+ DEBUG [1ea5d28f] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [ef0831b7] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/assets_manifest_backup as ubuntu@99.79.123.96
+ DEBUG [ef0831b7] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/assets_manifest_backup
+  INFO [ef0831b7] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [fbba1cae] Running /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets/.sprockets-manifest* as ubuntu@99.79.123.96
+ DEBUG [fbba1cae] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets/.sprockets-manifest*
+ DEBUG [fbba1cae] 	/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json
+ DEBUG [fbba1cae] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [683e8170] Running /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets/.sprockets-manifest* as ubuntu@99.79.123.96
+ DEBUG [683e8170] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets/.sprockets-manifest*
+ DEBUG [683e8170] 	/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json
+ DEBUG [683e8170] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [b3970bf2] Running /usr/bin/env cp /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/assets_manifest_backup as ubuntu@99.79.123.96
+ DEBUG [b3970bf2] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && /usr/bin/env cp /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016/assets_manifest_backup
+  INFO [b3970bf2] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [4609b164] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [4609b164] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016'" 1>&2; false; fi
+ DEBUG [4609b164] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [fb870248] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate as ubuntu@99.79.123.96
+ DEBUG [fb870248] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 && ( export RAILS_ENV="development" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate )
+  INFO [fb870248] Finished in 7.671 seconds with exit status 0 (successful).
+  INFO [2f42244b] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 /home/ubuntu/apps/emmanuelsarpong/releases/current as ubuntu@99.79.123.96
+ DEBUG [2f42244b] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/releases/20210720101016 /home/ubuntu/apps/emmanuelsarpong/releases/current
+  INFO [2f42244b] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [285be4dd] Running /usr/bin/env mv /home/ubuntu/apps/emmanuelsarpong/releases/current /home/ubuntu/apps/emmanuelsarpong as ubuntu@99.79.123.96
+ DEBUG [285be4dd] Command: /usr/bin/env mv /home/ubuntu/apps/emmanuelsarpong/releases/current /home/ubuntu/apps/emmanuelsarpong
+  INFO [285be4dd] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [44740127] Running /usr/bin/env ls -x /home/ubuntu/apps/emmanuelsarpong/releases as ubuntu@99.79.123.96
+ DEBUG [44740127] Command: /usr/bin/env ls -x /home/ubuntu/apps/emmanuelsarpong/releases
+ DEBUG [44740127] 	20210719162703	20210719213637	20210719223459	20210719223854	20210720093434
+20210720101016
+ DEBUG [44740127] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 99.79.123.96
+ DEBUG [88d81990] Running [ -d /home/ubuntu/apps/emmanuelsarpong/current ] as ubuntu@99.79.123.96
+ DEBUG [88d81990] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/current ]
+ DEBUG [88d81990] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [f503919e] Running /usr/bin/env readlink /home/ubuntu/apps/emmanuelsarpong/current as ubuntu@99.79.123.96
+ DEBUG [f503919e] Command: /usr/bin/env readlink /home/ubuntu/apps/emmanuelsarpong/current
+ DEBUG [f503919e] 	/home/ubuntu/apps/emmanuelsarpong/releases/20210720101016
+ DEBUG [f503919e] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [b02cf040] Running /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210719162703 as ubuntu@99.79.123.96
+ DEBUG [b02cf040] Command: /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210719162703
+  INFO [b02cf040] Finished in 0.305 seconds with exit status 0 (successful).
+ DEBUG [1151d6fe] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [1151d6fe] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases'" 1>&2; false; fi
+ DEBUG [1151d6fe] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [05e47bca] Running /usr/bin/env echo "Branch main (at 347a92b0863b3bdbdec1d1d0a085dbd61c68debe) deployed as release 20210720101016 by emmanuelsarpong" >> /home/ubuntu/apps/emmanuelsarpong/revisions.log as ubuntu@99.79.123.96
+ DEBUG [05e47bca] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases && /usr/bin/env echo "Branch main (at 347a92b0863b3bdbdec1d1d0a085dbd61c68debe) deployed as release 20210720101016 by emmanuelsarpong" >> /home/ubuntu/apps/emmanuelsarpong/revisions.log
+  INFO [05e47bca] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [6f26e50c] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/current'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [6f26e50c] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/current'" 1>&2; false; fi
+ DEBUG [6f26e50c] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [fa5c14d5] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ] as ubuntu@99.79.123.96
+ DEBUG [fa5c14d5] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ]
+ DEBUG [fa5c14d5] Finished in 0.018 seconds with exit status 0 (successful).
+ DEBUG [a08a6f3d] Running /usr/bin/env kill -0 $( cat /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) as ubuntu@99.79.123.96
+ DEBUG [a08a6f3d] Command: cd /home/ubuntu/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /usr/bin/env kill -0 $( cat /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) )
+ DEBUG [a08a6f3d] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [83d779fc] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb restart as ubuntu@99.79.123.96
+ DEBUG [83d779fc] Command: cd /home/ubuntu/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb restart )
+ DEBUG [83d779fc] 	Command restart sent success
+  INFO [83d779fc] Finished in 1.309 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-07-21 09:24:03 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9c3ebdce] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [9c3ebdce] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/
+  INFO [9c3ebdce] Finished in 0.927 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [34e64887] Running /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as ubuntu@99.79.123.96
+ DEBUG [34e64887] Command: /usr/bin/env chmod +x /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [34e64887] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [1bee847c] Running /usr/bin/env mkdir -p /tmp as ubuntu@99.79.123.96
+ DEBUG [1bee847c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1bee847c] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-c034f69b135f9ffb0dd0.sh 0.0%
+  INFO Uploading /tmp/git-ssh-c034f69b135f9ffb0dd0.sh 100.0%
+  INFO [afb78780] Running /usr/bin/env chmod 700 /tmp/git-ssh-c034f69b135f9ffb0dd0.sh as ubuntu@99.79.123.96
+ DEBUG [afb78780] Command: /usr/bin/env chmod 700 /tmp/git-ssh-c034f69b135f9ffb0dd0.sh
+  INFO [afb78780] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [f308d0c9] Running [ -f /home/ubuntu/apps/emmanuelsarpong/repo/HEAD ] as ubuntu@99.79.123.96
+ DEBUG [f308d0c9] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/repo/HEAD ]
+ DEBUG [f308d0c9] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/emmanuelsarpong/repo
+ DEBUG [6c1da462] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [6c1da462] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [6c1da462] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [d37cfd77] Running /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git as ubuntu@99.79.123.96
+ DEBUG [d37cfd77] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c034f69b135f9ffb0dd0.sh" ; /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git )
+  INFO [d37cfd77] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [19544ff6] Running /usr/bin/env git remote update --prune as ubuntu@99.79.123.96
+ DEBUG [19544ff6] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c034f69b135f9ffb0dd0.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [19544ff6] 	Fetching origin
+  INFO [19544ff6] Finished in 0.338 seconds with exit status 0 (successful).
+ DEBUG [a6ccd545] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [a6ccd545] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [a6ccd545] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [016f62ee] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 as ubuntu@99.79.123.96
+ DEBUG [016f62ee] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c034f69b135f9ffb0dd0.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 )
+  INFO [016f62ee] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [98ee7c26] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 as ubuntu@99.79.123.96
+ DEBUG [98ee7c26] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c034f69b135f9ffb0dd0.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 )
+  INFO [98ee7c26] Finished in 0.942 seconds with exit status 0 (successful).
+ DEBUG [6eded812] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [6eded812] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [6eded812] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [292a1148] Running /usr/bin/env git rev-list --max-count=1 main as ubuntu@99.79.123.96
+ DEBUG [292a1148] Command: cd /home/ubuntu/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c034f69b135f9ffb0dd0.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [292a1148] 	347a92b0863b3bdbdec1d1d0a085dbd61c68debe
+ DEBUG [292a1148] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [18d602d4] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [18d602d4] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi
+ DEBUG [18d602d4] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [1468eab3] Running /usr/bin/env echo "347a92b0863b3bdbdec1d1d0a085dbd61c68debe" > REVISION as ubuntu@99.79.123.96
+ DEBUG [1468eab3] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /usr/bin/env echo "347a92b0863b3bdbdec1d1d0a085dbd61c68debe" > REVISION
+  INFO [1468eab3] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [df1ecdeb] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config as ubuntu@99.79.123.96
+ DEBUG [df1ecdeb] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config
+  INFO [df1ecdeb] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [63668132] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [63668132] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/database.yml ]
+ DEBUG [63668132] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [cd463f61] Running [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [cd463f61] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/database.yml ]
+ DEBUG [cd463f61] Finished in 0.013 seconds with exit status 1 (failed).
+  INFO [00b03303] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/database.yml as ubuntu@99.79.123.96
+ DEBUG [00b03303] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/database.yml
+  INFO [00b03303] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [e71aef0e] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [e71aef0e] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/application.yml ]
+ DEBUG [e71aef0e] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [6d1ddd48] Running [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [6d1ddd48] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/application.yml ]
+ DEBUG [6d1ddd48] Finished in 0.057 seconds with exit status 1 (failed).
+  INFO [8480cb78] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/application.yml as ubuntu@99.79.123.96
+ DEBUG [8480cb78] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/config/application.yml
+  INFO [8480cb78] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [3df3c335] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public as ubuntu@99.79.123.96
+ DEBUG [3df3c335] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public
+  INFO [3df3c335] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [8e1991b8] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/pids ] as ubuntu@99.79.123.96
+ DEBUG [8e1991b8] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/pids ]
+ DEBUG [8e1991b8] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [72c0edd4] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/pids ] as ubuntu@99.79.123.96
+ DEBUG [72c0edd4] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/pids ]
+ DEBUG [72c0edd4] Finished in 0.059 seconds with exit status 1 (failed).
+  INFO [9b68265a] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/pids as ubuntu@99.79.123.96
+ DEBUG [9b68265a] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/pids
+  INFO [9b68265a] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [57f4c365] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/sockets ] as ubuntu@99.79.123.96
+ DEBUG [57f4c365] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/sockets ]
+ DEBUG [57f4c365] Finished in 0.057 seconds with exit status 1 (failed).
+ DEBUG [d4bd3c19] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/sockets ] as ubuntu@99.79.123.96
+ DEBUG [d4bd3c19] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/sockets ]
+ DEBUG [d4bd3c19] Finished in 0.014 seconds with exit status 1 (failed).
+  INFO [4df0f555] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/sockets as ubuntu@99.79.123.96
+ DEBUG [4df0f555] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/tmp/sockets
+  INFO [4df0f555] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [323033bf] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/log ] as ubuntu@99.79.123.96
+ DEBUG [323033bf] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/log ]
+ DEBUG [323033bf] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [38532c25] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/log ] as ubuntu@99.79.123.96
+ DEBUG [38532c25] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/log ]
+ DEBUG [38532c25] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [c760fe50] Running /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/log as ubuntu@99.79.123.96
+ DEBUG [c760fe50] Command: /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/log
+  INFO [c760fe50] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [76484571] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/log as ubuntu@99.79.123.96
+ DEBUG [76484571] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/log
+  INFO [76484571] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [2334358a] Running [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets ] as ubuntu@99.79.123.96
+ DEBUG [2334358a] Command: [ -L /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets ]
+ DEBUG [2334358a] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [fab49519] Running [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets ] as ubuntu@99.79.123.96
+ DEBUG [fab49519] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets ]
+ DEBUG [fab49519] Finished in 0.055 seconds with exit status 1 (failed).
+  INFO [0db757af] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/public/assets /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets as ubuntu@99.79.123.96
+ DEBUG [0db757af] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/shared/public/assets /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets
+  INFO [0db757af] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [be37ac1d] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [be37ac1d] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi
+ DEBUG [be37ac1d] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [d0e1ab69] Running /usr/bin/env /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh rvm --install install . as ubuntu@99.79.123.96
+ DEBUG [d0e1ab69] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /usr/bin/env /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh rvm --install install .
+ DEBUG [d0e1ab69] 	Warning, new version of rvm available '1.29.12', you are using older version '1.29.9'.
+You can disable this warning with:   echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable auto-update with:     echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+You can update manually with:        rvm get VERSION                         (e.g. 'rvm get stable')
+
+ DEBUG [d0e1ab69] 	Already installed ruby-2.6.6.
+To reinstall use:
+
+    rvm reinstall ruby-2.6.6
+
+  INFO [d0e1ab69] Finished in 0.476 seconds with exit status 0 (successful).
+  INFO [8c39a0c9] Running /usr/bin/env git ls-remote https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git HEAD as ubuntu@99.79.123.96
+ DEBUG [8c39a0c9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c034f69b135f9ffb0dd0.sh" ; /usr/bin/env git ls-remote https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git HEAD )
+ DEBUG [8c39a0c9] 	347a92b0863b3bdbdec1d1d0a085dbd61c68debe	HEAD
+  INFO [8c39a0c9] Finished in 0.306 seconds with exit status 0 (successful).
+  INFO [c3fbd98b] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared /home/ubuntu/apps/emmanuelsarpong/releases as ubuntu@99.79.123.96
+ DEBUG [c3fbd98b] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared /home/ubuntu/apps/emmanuelsarpong/releases
+  INFO [c3fbd98b] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [1d360bbb] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/shared/public/assets as ubuntu@99.79.123.96
+ DEBUG [1d360bbb] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids /home/ubuntu/apps/emmanuelsarpong/shared/tmp/sockets /home/ubuntu/apps/emmanuelsarpong/shared/log /home/ubuntu/apps/emmanuelsarpong/shared/public/assets
+  INFO [1d360bbb] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [02c01932] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/config as ubuntu@99.79.123.96
+ DEBUG [02c01932] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/shared/config
+  INFO [02c01932] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [66525110] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [66525110] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/database.yml ]
+ DEBUG [66525110] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [f846171c] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [f846171c] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/config/application.yml ]
+ DEBUG [f846171c] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [5fb005df] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb ] as ubuntu@99.79.123.96
+ DEBUG [5fb005df] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb ]
+ DEBUG [5fb005df] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [dd68e590] Running [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/REVISION ] as ubuntu@99.79.123.96
+ DEBUG [dd68e590] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/REVISION ]
+ DEBUG [dd68e590] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [8b9625c5] Running /usr/bin/env cat /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/REVISION 2>/dev/null as ubuntu@99.79.123.96
+ DEBUG [8b9625c5] Command: /usr/bin/env cat /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/REVISION 2>/dev/null
+ DEBUG [8b9625c5] 	347a92b0863b3bdbdec1d1d0a085dbd61c68debe
+ DEBUG [8b9625c5] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [ce62d640] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [ce62d640] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi
+ DEBUG [ce62d640] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [6e572472] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local deployment true as ubuntu@99.79.123.96
+ DEBUG [6e572472] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local deployment true
+ DEBUG [6e572472] 	You are replacing the current local value of deployment, which is currently nil
+  INFO [6e572472] Finished in 1.080 seconds with exit status 0 (successful).
+  INFO [4273e9f7] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local path /home/ubuntu/apps/emmanuelsarpong/shared/bundle as ubuntu@99.79.123.96
+ DEBUG [4273e9f7] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local path /home/ubuntu/apps/emmanuelsarpong/shared/bundle
+ DEBUG [4273e9f7] 	You are replacing the current local value of path, which is currently nil
+  INFO [4273e9f7] Finished in 0.998 seconds with exit status 0 (successful).
+  INFO [f96183f1] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local without production as ubuntu@99.79.123.96
+ DEBUG [f96183f1] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local without production
+ DEBUG [f96183f1] 	You are replacing the current local value of without, which is currently nil
+  INFO [f96183f1] Finished in 1.090 seconds with exit status 0 (successful).
+ DEBUG [bad60507] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [bad60507] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi
+ DEBUG [bad60507] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [7c4ef075] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle check as ubuntu@99.79.123.96
+ DEBUG [7c4ef075] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle check
+ DEBUG [7c4ef075] 	Your Gemfile lists the gem figaro (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [7c4ef075] 	Your Gemfile lists the gem capistrano (~> 3.10) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [7c4ef075] 	Your Gemfile lists the gem capistrano-rails (~> 1.4) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [7c4ef075] 	Your Gemfile lists the gem capistrano-bundler (>= 1.1.0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [7c4ef075] 	Your Gemfile lists the gem rvm1-capistrano3 (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [7c4ef075] 	Your Gemfile lists the gem capistrano3-puma (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [7c4ef075] 	Your Gemfile lists the gem zendesk_api (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [7c4ef075] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [7c4ef075] 	The Gemfile's dependencies are satisfied
+ DEBUG [7c4ef075] Finished in 1.156 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [92722333] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [92722333] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi
+ DEBUG [92722333] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [d9af9aa4] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile as ubuntu@99.79.123.96
+ DEBUG [d9af9aa4] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && ( export RAILS_ENV="development" RAILS_GROUPS="" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile )
+ DEBUG [d9af9aa4] 	yarn install v1.22.5
+ DEBUG [d9af9aa4] 	warning package-lock.json found. Your project contains lock files generated by tools other than Yarn. It is advised not to mix package managers in order to avoid resolution inconsistencies caused by unsynchronized lock files. To clear this warning, remove package-lock.json.
+ DEBUG [d9af9aa4] 	[1/4] Resolving packages...
+ DEBUG [d9af9aa4] 	[2/4] Fetching packages...
+ DEBUG [d9af9aa4] 	[3/4] Linking dependencies...
+ DEBUG [d9af9aa4] 	[4/4] Building fresh packages...
+ DEBUG [d9af9aa4] 	success Saved lockfile.
+ DEBUG [d9af9aa4] 	Done in 0.07s.
+  INFO [d9af9aa4] Finished in 15.299 seconds with exit status 0 (successful).
+ DEBUG [fe1fe9b4] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [fe1fe9b4] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi
+ DEBUG [fe1fe9b4] Finished in 0.012 seconds with exit status 0 (successful).
+  INFO [1d7e6b24] Running /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/assets_manifest_backup as ubuntu@99.79.123.96
+ DEBUG [1d7e6b24] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /usr/bin/env mkdir -p /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/assets_manifest_backup
+  INFO [1d7e6b24] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [7cdff60c] Running /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets/.sprockets-manifest* as ubuntu@99.79.123.96
+ DEBUG [7cdff60c] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets/.sprockets-manifest*
+ DEBUG [7cdff60c] 	/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json
+ DEBUG [7cdff60c] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [7e58e70f] Running /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets/.sprockets-manifest* as ubuntu@99.79.123.96
+ DEBUG [7e58e70f] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /usr/bin/env ls /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets/.sprockets-manifest*
+ DEBUG [7e58e70f] 	/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json
+ DEBUG [7e58e70f] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [e6fa09bf] Running /usr/bin/env cp /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/assets_manifest_backup as ubuntu@99.79.123.96
+ DEBUG [e6fa09bf] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && /usr/bin/env cp /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/public/assets/.sprockets-manifest-032f8e9714bcc5c89f0219a241941fc2.json /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404/assets_manifest_backup
+  INFO [e6fa09bf] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [e08d661f] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [e08d661f] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404'" 1>&2; false; fi
+ DEBUG [e08d661f] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [97115933] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate as ubuntu@99.79.123.96
+ DEBUG [97115933] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 && ( export RAILS_ENV="development" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate )
+  INFO [97115933] Finished in 5.309 seconds with exit status 0 (successful).
+  INFO [c79a5e47] Running /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 /home/ubuntu/apps/emmanuelsarpong/releases/current as ubuntu@99.79.123.96
+ DEBUG [c79a5e47] Command: /usr/bin/env ln -s /home/ubuntu/apps/emmanuelsarpong/releases/20210721132404 /home/ubuntu/apps/emmanuelsarpong/releases/current
+  INFO [c79a5e47] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [1d3581a1] Running /usr/bin/env mv /home/ubuntu/apps/emmanuelsarpong/releases/current /home/ubuntu/apps/emmanuelsarpong as ubuntu@99.79.123.96
+ DEBUG [1d3581a1] Command: /usr/bin/env mv /home/ubuntu/apps/emmanuelsarpong/releases/current /home/ubuntu/apps/emmanuelsarpong
+  INFO [1d3581a1] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [5e3a8c8f] Running /usr/bin/env ls -x /home/ubuntu/apps/emmanuelsarpong/releases as ubuntu@99.79.123.96
+ DEBUG [5e3a8c8f] Command: /usr/bin/env ls -x /home/ubuntu/apps/emmanuelsarpong/releases
+ DEBUG [5e3a8c8f] 	20210719213637	20210719223459	20210719223854	20210720093434	20210720101016
+20210721132404
+ DEBUG [5e3a8c8f] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 99.79.123.96
+ DEBUG [a334f2d8] Running [ -d /home/ubuntu/apps/emmanuelsarpong/current ] as ubuntu@99.79.123.96
+ DEBUG [a334f2d8] Command: [ -d /home/ubuntu/apps/emmanuelsarpong/current ]
+ DEBUG [a334f2d8] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [489922a9] Running /usr/bin/env readlink /home/ubuntu/apps/emmanuelsarpong/current as ubuntu@99.79.123.96
+ DEBUG [489922a9] Command: /usr/bin/env readlink /home/ubuntu/apps/emmanuelsarpong/current
+ DEBUG [489922a9] 	/home/ubuntu/apps/emmanuelsarpong/releases/20210721132404
+ DEBUG [489922a9] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [4c4c706a] Running /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210719213637 as ubuntu@99.79.123.96
+ DEBUG [4c4c706a] Command: /usr/bin/env rm -rf /home/ubuntu/apps/emmanuelsarpong/releases/20210719213637
+  INFO [4c4c706a] Finished in 2.361 seconds with exit status 0 (successful).
+ DEBUG [211680fe] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [211680fe] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/releases; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/releases'" 1>&2; false; fi
+ DEBUG [211680fe] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [731cf125] Running /usr/bin/env echo "Branch main (at 347a92b0863b3bdbdec1d1d0a085dbd61c68debe) deployed as release 20210721132404 by emmanuelsarpong" >> /home/ubuntu/apps/emmanuelsarpong/revisions.log as ubuntu@99.79.123.96
+ DEBUG [731cf125] Command: cd /home/ubuntu/apps/emmanuelsarpong/releases && /usr/bin/env echo "Branch main (at 347a92b0863b3bdbdec1d1d0a085dbd61c68debe) deployed as release 20210721132404 by emmanuelsarpong" >> /home/ubuntu/apps/emmanuelsarpong/revisions.log
+  INFO [731cf125] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [d4c77cfa] Running if test ! -d /home/ubuntu/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/current'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [d4c77cfa] Command: if test ! -d /home/ubuntu/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/ubuntu/apps/emmanuelsarpong/current'" 1>&2; false; fi
+ DEBUG [d4c77cfa] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [41cb0fb6] Running [ -f /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ] as ubuntu@99.79.123.96
+ DEBUG [41cb0fb6] Command: [ -f /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ]
+ DEBUG [41cb0fb6] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [f1336df8] Running /usr/bin/env kill -0 $( cat /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) as ubuntu@99.79.123.96
+ DEBUG [f1336df8] Command: cd /home/ubuntu/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /usr/bin/env kill -0 $( cat /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) )
+ DEBUG [f1336df8] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [a5846c59] Running /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb restart as ubuntu@99.79.123.96
+ DEBUG [a5846c59] Command: cd /home/ubuntu/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /home/ubuntu/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/ubuntu/apps/emmanuelsarpong/shared/puma.rb restart )
+ DEBUG [a5846c59] 	Command restart sent success
+  INFO [a5846c59] Finished in 1.347 seconds with exit status 0 (successful).

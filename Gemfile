@@ -19,7 +19,6 @@ gem 'slack-ruby-client'
 gem 'async-websocket', '~> 0.8.0'
 gem "zendesk_api"
 gem 'oauth2'
-gem "figaro"
 gem "pry"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -58,7 +57,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -68,11 +68,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'capistrano', '~> 3.10', require: false
-  gem 'capistrano-rails', '~> 1.4', require: false
-  gem 'capistrano-bundler', '>= 1.1.0'
-  gem 'rvm1-capistrano3', require: false
-  gem 'capistrano3-puma'
   gem 'capistrano', '~> 3.10', require: false
   gem 'capistrano-rails', '~> 1.4', require: false
   gem 'capistrano-bundler', '>= 1.1.0'
@@ -106,8 +101,21 @@ gem 'underscore-rails'
 gem 'geocoder'
 
 gem 'ed25519'
+
 gem 'bcrypt_pbkdf'
 
 gem "slack-notifier"
-
 gem 'slack-ruby-bot'
+
+gem 'rspec', '~> 3.0'
+
+gem 'openssl'
+
+gem 'open-uri'
+
+gem 'faraday'
+
+gem 'uri'
+
+
+
