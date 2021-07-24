@@ -80,19 +80,31 @@
 # require 'rails_helper'
 
 # RSpec.describe "User Registration", type: :system do
-# #   before do
-# #     driven_by(:rack_test)
-# #   end
-
-#   context "signs up a new user" do
-#     it "signs a user up" do
-#       visit '/users/sign_up'
-#       within("#new_user") do
-#         fill_in 'Email', with: 'nicolas.genest@codeboxx.biz'
-#         fill_in 'Password', with: 'codeboxx'
+#     before do
+#       driven_by(:rack_test)
+#     end
+  
+#     context "does not sign up a new user" do
+#       it "signs a user up" do
+#         visit '/users/sign_up'
+#         within("#new_user") do
+#           fill_in 'Email', with: 'user@example.com'
+#           fill_in 'Password', with: 'password'
+#         end
+#         click_button('Sign up') # submits the form
+#         expect(page).to have_content 'First name can\'t be blank'
 #       end
-#       click_button('Sign up') # submits the form
-#       expect(page).to have_content 'You have signed up successfully'
+#     end
+#     context "signs up a new user" do
+#       it "signs a user up" do
+#         visit '/users/sign_up'
+#         within("#new_user") do
+#           fill_in 'Full name', with: 'User Example'
+#           fill_in 'Email', with: 'user@example.com'
+#           fill_in 'Password', with: 'password'
+#         end
+#         click_button('Sign up') # submits the form
+#         expect(page).to have_content 'You have signed up successfully'
+#       end
 #     end
 #   end
-# end

@@ -22,8 +22,3 @@ describe Streamer do
     end
 end
 
-# require 'faraday'
-
-# Faraday.get('https://pokeapi.co/api/v2/ability/4')
-
-# p response.status
