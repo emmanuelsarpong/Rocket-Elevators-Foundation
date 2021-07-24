@@ -7,7 +7,7 @@ describe Streamer do
         streamer = Streamer.new
         context 'output' do
             it 'Returns an HTML link' do
-            expect(streamer.getContent).to be_kind_of String
+            expect(streamer.getContent).to be_a String
             end
         end
     end

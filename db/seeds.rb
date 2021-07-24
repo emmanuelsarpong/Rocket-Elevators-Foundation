@@ -25,8 +25,8 @@ User.destroy_all
 
 user = User.create!(
 email: "nicolas.genest@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -38,8 +38,8 @@ user: user)
 
 user = User.create!(
 email: "nadya.fortier@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -51,8 +51,8 @@ user: user)
 
 user = User.create!(
 email: "martin.chantal@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -65,8 +65,8 @@ user: user)
     
 user = User.create!(
 email: "mathieu.houde@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -78,8 +78,8 @@ user: user)
 
 user = User.create!(
   email:"patrick.thibault@codeboxx.biz" ,
-  password:"codeboxx",
-  password_confirmation:"codeboxx")
+  password:"Codeboxx!",
+  password_confirmation:"Codeboxx!")
   user.add_role :admin  
 
 employees=Employee.create!(
@@ -91,8 +91,8 @@ user: user )
 
 user = User.create!(
 email:"david.boutin@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -104,8 +104,8 @@ user: user )
 
 user = User.create!(
 email:"mathieu.lortie@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -117,8 +117,8 @@ user: user)
 
 user = User.create!(
 email:"thomas.carrier@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -130,8 +130,8 @@ user: user)
 
 user = User.create!(
 email:"serge.savoie@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -143,8 +143,8 @@ user: user)
 
 user = User.create!(
 email:"francis.patry-jessop@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -156,8 +156,8 @@ user: user)
 
 user = User.create!(
 email:"mathieu.lefrancois@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -169,8 +169,8 @@ user: user)
 
 user = User.create!(
 email:"david.larochelle@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -182,8 +182,8 @@ user: user)
 
 user = User.create!(
 email:"nicolas.pineault@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -195,8 +195,8 @@ user: user)
 
 user = User.create!(
 email:"david.amyot@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -208,8 +208,8 @@ user: user)
 
 user = User.create!(
 email:"remi.gagnon@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -221,8 +221,8 @@ user: user)
 
 user = User.create!(
 email:"timothy.wever@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -234,8 +234,8 @@ user: user)
 
 user = User.create!(
 email:"kiril.kleinerman@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -247,8 +247,8 @@ user: user)
 
 user = User.create!(
 email:"emmanuela.derilus@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -260,8 +260,8 @@ user: user)
 
 user = User.create!(
 email: "abdul.akeeb@codebozz.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -273,8 +273,8 @@ user: user)
 
 user = User.create!(
 email:"krista.sheely@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -286,8 +286,8 @@ user: user)
 
 user = User.create!(
 email:"jonathan.murray@codeboxx.biz",
-password:"codeboxx",
-password_confirmation:"codeboxx")
+password:"Codeboxx!",
+password_confirmation:"Codeboxx!")
 user.add_role :admin
 
 employees=Employee.create!(
@@ -302,8 +302,8 @@ user: user)
 for _ in 1..50 # Loop User*********************
   customers = User.create!(
     email: Faker::Internet.email,
-    password:"codeboxx",
-    password_confirmation:"codeboxx"
+    password:"Codeboxx!",
+    password_confirmation:"Codeboxx!"
   )
 end
 
