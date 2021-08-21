@@ -21,7 +21,7 @@ datawarehouse_development:
   host: localhost
   username: postgres
   password: salutsalut
-  adapter: postgresql
+  adapter: postgresqla
   encoding: unicode
   database: datawarehouse_development
 

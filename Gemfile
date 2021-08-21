@@ -5,7 +5,6 @@ ruby '2.6.6'
 
 gem "figaro"
 gem 'dotenv-rails', groups: [:development, :test]
-
 gem 'cancancan'
 gem 'faker'
 gem 'rolify'
@@ -14,7 +13,6 @@ gem 'rails_admin', '~> 2.0'
 gem 'multiverse'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'dropbox_api'
-
 gem 'slack-ruby-client'
 gem 'async-websocket', '~> 0.8.0'
 gem "zendesk_api"
@@ -44,13 +42,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -73,7 +68,6 @@ group :development do
   gem 'capistrano-bundler', '>= 1.1.0'
   gem 'rvm1-capistrano3', require: false
   gem 'capistrano3-puma'
-
 end
 
 group :test do
@@ -82,41 +76,26 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   # gem 'chromedriver-helper'
-  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+gem 'tzinfo-data', '>= 1.2.9.', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sendgrid-ruby'
 gem "zendesk_api"
 gem 'ibm_watson', '~> 2.1', '>= 2.1.1'
-
-
 gem 'twilio-ruby'
 gem 'sinatra'
-
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'geocoder'
-
 gem 'ed25519'
-
 gem 'bcrypt_pbkdf'
-
 gem "slack-notifier"
 gem 'slack-ruby-bot'
-
 gem 'rspec', '~> 3.0'
-
 gem 'openssl'
-
 gem 'open-uri'
-
 gem 'faraday'
-
 gem 'uri'
-
 gem 'shoulda-matchers', require: false
-
 gem 'rails-controller-testing'
