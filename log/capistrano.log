@@ -23894,3 +23894,396 @@ by running `bundle config unset deployment`.
 
 You have deleted from the Gemfile:
 * tzinfo-data
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 16:45:43 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3659c64f] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/ as bitnami@3.99.18.191
+ DEBUG [3659c64f] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/
+  INFO [3659c64f] Finished in 0.208 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [c62204a1] Running /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as bitnami@3.99.18.191
+ DEBUG [c62204a1] Command: /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [c62204a1] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [7f5348f0] Running /usr/bin/env mkdir -p /tmp as bitnami@3.99.18.191
+ DEBUG [7f5348f0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7f5348f0] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-6e5c09a0971273ba2323.sh 0.0%
+  INFO Uploading /tmp/git-ssh-6e5c09a0971273ba2323.sh 100.0%
+  INFO [353f7400] Running /usr/bin/env chmod 700 /tmp/git-ssh-6e5c09a0971273ba2323.sh as bitnami@3.99.18.191
+ DEBUG [353f7400] Command: /usr/bin/env chmod 700 /tmp/git-ssh-6e5c09a0971273ba2323.sh
+  INFO [353f7400] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [c21532a5] Running [ -f /home/bitnami/apps/emmanuelsarpong/repo/HEAD ] as bitnami@3.99.18.191
+ DEBUG [c21532a5] Command: [ -f /home/bitnami/apps/emmanuelsarpong/repo/HEAD ]
+ DEBUG [c21532a5] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/bitnami/apps/emmanuelsarpong/repo
+ DEBUG [f8440776] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/repo'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [f8440776] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [f8440776] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [2ccb11db] Running /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git as bitnami@3.99.18.191
+ DEBUG [2ccb11db] Command: cd /home/bitnami/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6e5c09a0971273ba2323.sh" ; /usr/bin/env git remote set-url origin https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git )
+  INFO [2ccb11db] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [bd401c14] Running /usr/bin/env git remote update --prune as bitnami@3.99.18.191
+ DEBUG [bd401c14] Command: cd /home/bitnami/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6e5c09a0971273ba2323.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bd401c14] 	Fetching origin
+ DEBUG [bd401c14] 	From https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation
+   2c619d70..fcac20f4  main       -> main
+  INFO [bd401c14] Finished in 0.462 seconds with exit status 0 (successful).
+ DEBUG [057b92a8] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/repo'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [057b92a8] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [057b92a8] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [dac51f79] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 as bitnami@3.99.18.191
+ DEBUG [dac51f79] Command: cd /home/bitnami/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6e5c09a0971273ba2323.sh" ; /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 )
+  INFO [dac51f79] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [f568a1a7] Running /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 as bitnami@3.99.18.191
+ DEBUG [f568a1a7] Command: cd /home/bitnami/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6e5c09a0971273ba2323.sh" ; /usr/bin/env git archive main | /usr/bin/env tar -x -f - -C /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 )
+  INFO [f568a1a7] Finished in 2.131 seconds with exit status 0 (successful).
+ DEBUG [3f68663f] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/repo'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [3f68663f] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/repo; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/repo'" 1>&2; false; fi
+ DEBUG [3f68663f] Finished in 0.073 seconds with exit status 0 (successful).
+ DEBUG [bbe1fb82] Running /usr/bin/env git rev-list --max-count=1 main as bitnami@3.99.18.191
+ DEBUG [bbe1fb82] Command: cd /home/bitnami/apps/emmanuelsarpong/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6e5c09a0971273ba2323.sh" ; /usr/bin/env git rev-list --max-count=1 main )
+ DEBUG [bbe1fb82] 	fcac20f4be8c6d86c9cadc693c4712b07fbf879d
+ DEBUG [bbe1fb82] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [4da37284] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [4da37284] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi
+ DEBUG [4da37284] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [0bbc3b40] Running /usr/bin/env echo "fcac20f4be8c6d86c9cadc693c4712b07fbf879d" > REVISION as bitnami@3.99.18.191
+ DEBUG [0bbc3b40] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /usr/bin/env echo "fcac20f4be8c6d86c9cadc693c4712b07fbf879d" > REVISION
+  INFO [0bbc3b40] Finished in 0.220 seconds with exit status 0 (successful).
+  INFO [d52b457d] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config as bitnami@3.99.18.191
+ DEBUG [d52b457d] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config
+  INFO [d52b457d] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [a87783ed] Running [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/database.yml ] as bitnami@3.99.18.191
+ DEBUG [a87783ed] Command: [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/database.yml ]
+ DEBUG [a87783ed] Finished in 0.057 seconds with exit status 1 (failed).
+ DEBUG [0bc39bc8] Running [ -f /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/database.yml ] as bitnami@3.99.18.191
+ DEBUG [0bc39bc8] Command: [ -f /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/database.yml ]
+ DEBUG [0bc39bc8] Finished in 0.057 seconds with exit status 1 (failed).
+  INFO [721083dd] Running /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/config/database.yml /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/database.yml as bitnami@3.99.18.191
+ DEBUG [721083dd] Command: /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/config/database.yml /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/database.yml
+  INFO [721083dd] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [c7187098] Running [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/application.yml ] as bitnami@3.99.18.191
+ DEBUG [c7187098] Command: [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/application.yml ]
+ DEBUG [c7187098] Finished in 0.060 seconds with exit status 1 (failed).
+ DEBUG [1487ca2b] Running [ -f /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/application.yml ] as bitnami@3.99.18.191
+ DEBUG [1487ca2b] Command: [ -f /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/application.yml ]
+ DEBUG [1487ca2b] Finished in 0.060 seconds with exit status 1 (failed).
+  INFO [2d8913d3] Running /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/config/application.yml /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/application.yml as bitnami@3.99.18.191
+ DEBUG [2d8913d3] Command: /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/config/application.yml /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/config/application.yml
+  INFO [2d8913d3] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [bb23c757] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public as bitnami@3.99.18.191
+ DEBUG [bb23c757] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public
+  INFO [bb23c757] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [039f5df8] Running [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/pids ] as bitnami@3.99.18.191
+ DEBUG [039f5df8] Command: [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/pids ]
+ DEBUG [039f5df8] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [1e0e9488] Running [ -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/pids ] as bitnami@3.99.18.191
+ DEBUG [1e0e9488] Command: [ -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/pids ]
+ DEBUG [1e0e9488] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [cce76176] Running /usr/bin/env rm -rf /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/pids as bitnami@3.99.18.191
+ DEBUG [cce76176] Command: /usr/bin/env rm -rf /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/pids
+  INFO [cce76176] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [c7f6d032] Running /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/pids as bitnami@3.99.18.191
+ DEBUG [c7f6d032] Command: /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/pids
+  INFO [c7f6d032] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [454c8d91] Running [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/sockets ] as bitnami@3.99.18.191
+ DEBUG [454c8d91] Command: [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/sockets ]
+ DEBUG [454c8d91] Finished in 0.058 seconds with exit status 1 (failed).
+ DEBUG [ccaeec7c] Running [ -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/sockets ] as bitnami@3.99.18.191
+ DEBUG [ccaeec7c] Command: [ -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/sockets ]
+ DEBUG [ccaeec7c] Finished in 0.061 seconds with exit status 1 (failed).
+  INFO [2b263dec] Running /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/tmp/sockets /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/sockets as bitnami@3.99.18.191
+ DEBUG [2b263dec] Command: /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/tmp/sockets /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/tmp/sockets
+  INFO [2b263dec] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [9c95c677] Running [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/log ] as bitnami@3.99.18.191
+ DEBUG [9c95c677] Command: [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/log ]
+ DEBUG [9c95c677] Finished in 0.058 seconds with exit status 1 (failed).
+ DEBUG [84fdbc36] Running [ -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/log ] as bitnami@3.99.18.191
+ DEBUG [84fdbc36] Command: [ -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/log ]
+ DEBUG [84fdbc36] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [063c6d59] Running /usr/bin/env rm -rf /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/log as bitnami@3.99.18.191
+ DEBUG [063c6d59] Command: /usr/bin/env rm -rf /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/log
+  INFO [063c6d59] Finished in 0.218 seconds with exit status 0 (successful).
+  INFO [a0b07fce] Running /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/log /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/log as bitnami@3.99.18.191
+ DEBUG [a0b07fce] Command: /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/log /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/log
+  INFO [a0b07fce] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [ef7777bb] Running [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets ] as bitnami@3.99.18.191
+ DEBUG [ef7777bb] Command: [ -L /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets ]
+ DEBUG [ef7777bb] Finished in 0.057 seconds with exit status 1 (failed).
+ DEBUG [24bb231e] Running [ -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets ] as bitnami@3.99.18.191
+ DEBUG [24bb231e] Command: [ -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets ]
+ DEBUG [24bb231e] Finished in 0.061 seconds with exit status 1 (failed).
+  INFO [4ce04142] Running /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/public/assets /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets as bitnami@3.99.18.191
+ DEBUG [4ce04142] Command: /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/shared/public/assets /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets
+  INFO [4ce04142] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [ede820d5] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [ede820d5] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi
+ DEBUG [ede820d5] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [332412c1] Running /usr/bin/env /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh rvm --install install . as bitnami@3.99.18.191
+ DEBUG [332412c1] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /usr/bin/env /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh rvm --install install .
+ DEBUG [332412c1] 	Already installed ruby-2.6.6.
+To reinstall use:
+
+    rvm reinstall ruby-2.6.6
+
+  INFO [332412c1] Finished in 0.709 seconds with exit status 0 (successful).
+  INFO [83540883] Running /usr/bin/env git ls-remote https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git HEAD as bitnami@3.99.18.191
+ DEBUG [83540883] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6e5c09a0971273ba2323.sh" ; /usr/bin/env git ls-remote https://github.com/emmanuelsarpong/Rocket-Elevators-Foundation.git HEAD )
+ DEBUG [83540883] 	fcac20f4be8c6d86c9cadc693c4712b07fbf879d	HEAD
+  INFO [83540883] Finished in 0.406 seconds with exit status 0 (successful).
+  INFO [20ac0b97] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/shared /home/bitnami/apps/emmanuelsarpong/releases as bitnami@3.99.18.191
+ DEBUG [20ac0b97] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/shared /home/bitnami/apps/emmanuelsarpong/releases
+  INFO [20ac0b97] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [706f2873] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids /home/bitnami/apps/emmanuelsarpong/shared/tmp/sockets /home/bitnami/apps/emmanuelsarpong/shared/log /home/bitnami/apps/emmanuelsarpong/shared/public/assets as bitnami@3.99.18.191
+ DEBUG [706f2873] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids /home/bitnami/apps/emmanuelsarpong/shared/tmp/sockets /home/bitnami/apps/emmanuelsarpong/shared/log /home/bitnami/apps/emmanuelsarpong/shared/public/assets
+  INFO [706f2873] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [a8f14c84] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/shared/config as bitnami@3.99.18.191
+ DEBUG [a8f14c84] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/shared/config
+  INFO [a8f14c84] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [02f6fe29] Running [ -f /home/bitnami/apps/emmanuelsarpong/shared/config/database.yml ] as bitnami@3.99.18.191
+ DEBUG [02f6fe29] Command: [ -f /home/bitnami/apps/emmanuelsarpong/shared/config/database.yml ]
+ DEBUG [02f6fe29] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [34074aef] Running [ -f /home/bitnami/apps/emmanuelsarpong/shared/config/application.yml ] as bitnami@3.99.18.191
+ DEBUG [34074aef] Command: [ -f /home/bitnami/apps/emmanuelsarpong/shared/config/application.yml ]
+ DEBUG [34074aef] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [89942f58] Running [ -f /home/bitnami/apps/emmanuelsarpong/shared/puma.rb ] as bitnami@3.99.18.191
+ DEBUG [89942f58] Command: [ -f /home/bitnami/apps/emmanuelsarpong/shared/puma.rb ]
+ DEBUG [89942f58] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [5fd21455] Running [ -f /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/REVISION ] as bitnami@3.99.18.191
+ DEBUG [5fd21455] Command: [ -f /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/REVISION ]
+ DEBUG [5fd21455] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [3295f1ac] Running /usr/bin/env cat /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/REVISION 2>/dev/null as bitnami@3.99.18.191
+ DEBUG [3295f1ac] Command: /usr/bin/env cat /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/REVISION 2>/dev/null
+ DEBUG [3295f1ac] 	fcac20f4be8c6d86c9cadc693c4712b07fbf879d
+ DEBUG [3295f1ac] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [5a570b24] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [5a570b24] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi
+ DEBUG [5a570b24] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [e3754b94] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local deployment true as bitnami@3.99.18.191
+ DEBUG [e3754b94] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local deployment true
+  INFO [e3754b94] Finished in 1.096 seconds with exit status 0 (successful).
+  INFO [51460faa] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local path /home/bitnami/apps/emmanuelsarpong/shared/bundle as bitnami@3.99.18.191
+ DEBUG [51460faa] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local path /home/bitnami/apps/emmanuelsarpong/shared/bundle
+  INFO [51460faa] Finished in 1.126 seconds with exit status 0 (successful).
+  INFO [577789c9] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local without production as bitnami@3.99.18.191
+ DEBUG [577789c9] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle config --local without production
+  INFO [577789c9] Finished in 1.023 seconds with exit status 0 (successful).
+ DEBUG [3a15dd1b] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [3a15dd1b] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi
+ DEBUG [3a15dd1b] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [0b04068f] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle check as bitnami@3.99.18.191
+ DEBUG [0b04068f] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle check
+ DEBUG [0b04068f] 	The following gems are missing
+ DEBUG [0b04068f] 	 * cancancan (3.3.0)
+ DEBUG [0b04068f] 	 * rails_admin (2.2.1)
+ DEBUG [0b04068f] 	 * bootsnap (1.7.7)
+ DEBUG [0b04068f] 	 * rspec-rails (5.0.2)
+ DEBUG [0b04068f] 	 * sendgrid-ruby (6.5.0)
+ DEBUG [0b04068f] 	 * zendesk_api (1.32.0)
+ DEBUG [0b04068f] 	 * twilio-ruby (5.58.0)
+ DEBUG [0b04068f] 	 * faraday (1.7.0)
+ DEBUG [0b04068f] 	 * haml (5.2.2)
+ DEBUG [0b04068f] 	 * faraday_middleware (1.1.0)
+ DEBUG [0b04068f] 	 * websocket-driver (0.7.5)
+ DEBUG [0b04068f] 	 * async-io (1.32.2)
+ DEBUG [0b04068f] 	 * rake (13.0.6)
+ DEBUG [0b04068f] 	 * nokogiri (1.12.3)
+ DEBUG [0b04068f] 	 * rubyzip (2.3.2)
+ DEBUG [0b04068f] 	 * faraday-httpclient (1.0.1)
+ DEBUG [0b04068f] 	 * faraday-net_http_persistent (1.2.0)
+ DEBUG [0b04068f] 	 * faraday-patron (1.0.0)
+ DEBUG [0b04068f] 	 * faraday-rack (1.0.0)
+ DEBUG [0b04068f] 	 * ruby2_keywords (0.0.5)
+ DEBUG [0b04068f] 	 * async (1.30.1)
+ DEBUG [0b04068f] 	 * nio4r (2.5.8)
+ DEBUG [0b04068f] 	 * rails-html-sanitizer (1.4.1)
+ DEBUG [0b04068f] 	 * globalid (0.5.2)
+ DEBUG [0b04068f] 	 * ffi (1.15.3)
+ DEBUG [0b04068f] 	 * mini_portile2 (2.6.1)
+ DEBUG [0b04068f] 	 * loofah (2.12.0)
+ DEBUG [0b04068f] 	Install missing gems with `bundle install`
+ DEBUG [0b04068f] Finished in 1.224 seconds with exit status 1 (failed).
+  INFO [90e94af7] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle install --jobs 4 --quiet as bitnami@3.99.18.191
+ DEBUG [90e94af7] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle install --jobs 4 --quiet
+  INFO [90e94af7] Finished in 28.426 seconds with exit status 0 (successful).
+ DEBUG [49e363a4] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [49e363a4] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi
+ DEBUG [49e363a4] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [2213d8e0] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile as bitnami@3.99.18.191
+ DEBUG [2213d8e0] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && ( export RAILS_ENV="development" RAILS_GROUPS="" ; /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile )
+ DEBUG [2213d8e0] 	Yarn executable was not detected in the system.
+ DEBUG [2213d8e0] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:44.091911 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/rails_admin/rails_admin-bf953479bb93adacd7f83cf3cb4b438ed957c4d2efff70d33a56bc73d019bdc3.js
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:44.093889 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/rails_admin/rails_admin-bf953479bb93adacd7f83cf3cb4b438ed957c4d2efff70d33a56bc73d019bdc3.js.gz
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:48.746847 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/rails_admin/rails_admin-a8a45c9fcdf7600dee67f64c4129f6a7c2d7e960d0c0267bc2ac59e9f7010789.css
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:48.747817 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/rails_admin/rails_admin-a8a45c9fcdf7600dee67f64c4129f6a7c2d7e960d0c0267bc2ac59e9f7010789.css.gz
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:48.817602 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/rails_admin/jquery.colorpicker-2ea55756212c19bcd59d72c8ac39569e2874853636f4281064b4ba2edbeedadc.css
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:48.818050 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/rails_admin/jquery.colorpicker-2ea55756212c19bcd59d72c8ac39569e2874853636f4281064b4ba2edbeedadc.css.gz
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:49.407561 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/index/slide/pic-954b81545a2dfe60ead40a95b549c778bf4ed950c0531dd030779577a8af24e3.jpg
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:49.434638 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/index/slide/pic10-b375e870cc59815a435de298ee1e46e2faee1cf84c56a679ef89627530c78f5a.jpg
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:49.453768 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/index/slide/pic11-890d3416eb5039058e7b45b6445ce67b3d992e1d6f229ce9037629fd9a9d335d.jpg
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:49.649308 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/index/slide/pic12-8c7e5e884f91d314fcf57c5e6568784f8516909148bcbbd782de93f73d80455c.jpg
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:49.671850 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/index/slide/pic13-b19905e1c9070f62463f1470e275ab463bee52f65865aecb23eb13b87b978d20.jpg
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:49.688372 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/index/slide/pic14-e9f73f1aa443516fdb647d838976a83d411f8541cadb284e4539e354d6e2375d.jpg
+ DEBUG [2213d8e0] 	I, [2021-08-21T20:46:49.698030 #19416]  INFO -- : Writing /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/index/slide/pic15-72780da3114d87d14478a37053ab16fd5858b6fbd4c7ecdcc1492a8e64b9d69a.jpg
+  INFO [2213d8e0] Finished in 27.456 seconds with exit status 0 (successful).
+ DEBUG [7bb8a866] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [7bb8a866] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi
+ DEBUG [7bb8a866] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO [5f2af772] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/assets_manifest_backup as bitnami@3.99.18.191
+ DEBUG [5f2af772] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/assets_manifest_backup
+  INFO [5f2af772] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [103f339f] Running /usr/bin/env ls /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/.sprockets-manifest* as bitnami@3.99.18.191
+ DEBUG [103f339f] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /usr/bin/env ls /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/.sprockets-manifest*
+ DEBUG [103f339f] 	/home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/.sprockets-manifest-455b0836b57a3ea5f308564330628313.json
+ DEBUG [103f339f] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [f2e17b97] Running /usr/bin/env ls /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/.sprockets-manifest* as bitnami@3.99.18.191
+ DEBUG [f2e17b97] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /usr/bin/env ls /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/.sprockets-manifest*
+ DEBUG [f2e17b97] 	/home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/.sprockets-manifest-455b0836b57a3ea5f308564330628313.json
+ DEBUG [f2e17b97] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [26d02ad2] Running /usr/bin/env cp /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/.sprockets-manifest-455b0836b57a3ea5f308564330628313.json /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/assets_manifest_backup as bitnami@3.99.18.191
+ DEBUG [26d02ad2] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && /usr/bin/env cp /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/public/assets/.sprockets-manifest-455b0836b57a3ea5f308564330628313.json /home/bitnami/apps/emmanuelsarpong/releases/20210821204544/assets_manifest_backup
+  INFO [26d02ad2] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [4d031e13] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [4d031e13] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/releases/20210821204544; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases/20210821204544'" 1>&2; false; fi
+ DEBUG [4d031e13] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [2ec5478d] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate as bitnami@3.99.18.191
+ DEBUG [2ec5478d] Command: cd /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 && ( export RAILS_ENV="development" ; /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate )
+  INFO [2ec5478d] Finished in 8.602 seconds with exit status 0 (successful).
+  INFO [8cfc5af1] Running /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 /home/bitnami/apps/emmanuelsarpong/releases/current as bitnami@3.99.18.191
+ DEBUG [8cfc5af1] Command: /usr/bin/env ln -s /home/bitnami/apps/emmanuelsarpong/releases/20210821204544 /home/bitnami/apps/emmanuelsarpong/releases/current
+  INFO [8cfc5af1] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [44de001c] Running /usr/bin/env mv /home/bitnami/apps/emmanuelsarpong/releases/current /home/bitnami/apps/emmanuelsarpong as bitnami@3.99.18.191
+ DEBUG [44de001c] Command: /usr/bin/env mv /home/bitnami/apps/emmanuelsarpong/releases/current /home/bitnami/apps/emmanuelsarpong
+  INFO [44de001c] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [80f93c1c] Running /usr/bin/env ls -x /home/bitnami/apps/emmanuelsarpong/releases as bitnami@3.99.18.191
+ DEBUG [80f93c1c] Command: /usr/bin/env ls -x /home/bitnami/apps/emmanuelsarpong/releases
+ DEBUG [80f93c1c] 	20210821092036	20210821135611	20210821140356	20210821140714	20210821140841
+20210821143128	20210821143355	20210821143435	20210821144202	20210821144512
+20210821144721	20210821145515	20210821150505	20210821150820	20210821150926
+20210821151304	20210821151354	20210821203431	20210821203750	20210821204013
+20210821204132	20210821204233	20210821204354	20210821204544
+ DEBUG [80f93c1c] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 24 deployed releases on 3.99.18.191
+ DEBUG [b6df1fdf] Running [ -d /home/bitnami/apps/emmanuelsarpong/current ] as bitnami@3.99.18.191
+ DEBUG [b6df1fdf] Command: [ -d /home/bitnami/apps/emmanuelsarpong/current ]
+ DEBUG [b6df1fdf] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [a682477d] Running /usr/bin/env readlink /home/bitnami/apps/emmanuelsarpong/current as bitnami@3.99.18.191
+ DEBUG [a682477d] Command: /usr/bin/env readlink /home/bitnami/apps/emmanuelsarpong/current
+ DEBUG [a682477d] 	/home/bitnami/apps/emmanuelsarpong/releases/20210821204544
+ DEBUG [a682477d] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [fd270bff] Running /usr/bin/env rm -rf /home/bitnami/apps/emmanuelsarpong/releases/20210821092036 /home/bitnami/apps/emmanuelsarpong/releases/20210821135611 /home/bitnami/apps/emmanuelsarpong/releases/20210821140356 /home/bitnami/apps/emmanuelsarpong/releases/20210821140714 /home/bitnami/apps/emmanuelsarpong/releases/20210821140841 /home/bitnami/apps/emmanuelsarpong/releases/20210821143128 /home/bitnami/apps/emmanuelsarpong/releases/20210821143355 /home/bitnami/apps/emmanuelsarpong/releases/20210821143435 /home/bitnami/apps/emmanuelsarpong/releases/20210821144202 /home/bitnami/apps/emmanuelsarpong/releases/20210821144512 /home/bitnami/apps/emmanuelsarpong/releases/20210821144721 /home/bitnami/apps/emmanuelsarpong/releases/20210821145515 /home/bitnami/apps/emmanuelsarpong/releases/20210821150505 /home/bitnami/apps/emmanuelsarpong/releases/20210821150820 /home/bitnami/apps/emmanuelsarpong/releases/20210821150926 /home/bitnami/apps/emmanuelsarpong/releases/20210821151304 /home/bitnami/apps/emmanuelsarpong/releases/20210821151354 /home/bitnami/apps/emmanuelsarpong/releases/20210821203431 /home/bitnami/apps/emmanuelsarpong/releases/20210821203750 as bitnami@3.99.18.191
+ DEBUG [fd270bff] Command: /usr/bin/env rm -rf /home/bitnami/apps/emmanuelsarpong/releases/20210821092036 /home/bitnami/apps/emmanuelsarpong/releases/20210821135611 /home/bitnami/apps/emmanuelsarpong/releases/20210821140356 /home/bitnami/apps/emmanuelsarpong/releases/20210821140714 /home/bitnami/apps/emmanuelsarpong/releases/20210821140841 /home/bitnami/apps/emmanuelsarpong/releases/20210821143128 /home/bitnami/apps/emmanuelsarpong/releases/20210821143355 /home/bitnami/apps/emmanuelsarpong/releases/20210821143435 /home/bitnami/apps/emmanuelsarpong/releases/20210821144202 /home/bitnami/apps/emmanuelsarpong/releases/20210821144512 /home/bitnami/apps/emmanuelsarpong/releases/20210821144721 /home/bitnami/apps/emmanuelsarpong/releases/20210821145515 /home/bitnami/apps/emmanuelsarpong/releases/20210821150505 /home/bitnami/apps/emmanuelsarpong/releases/20210821150820 /home/bitnami/apps/emmanuelsarpong/releases/20210821150926 /home/bitnami/apps/emmanuelsarpong/releases/20210821151304 /home/bitnami/apps/emmanuelsarpong/releases/20210821151354 /home/bitnami/apps/emmanuelsarpong/releases/20210821203431 /home/bitnami/apps/emmanuelsarpong/releases/20210821203750
+  INFO [fd270bff] Finished in 24.961 seconds with exit status 0 (successful).
+ DEBUG [d4e143e1] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/releases; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [d4e143e1] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/releases; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/releases'" 1>&2; false; fi
+ DEBUG [d4e143e1] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [e204792b] Running /usr/bin/env echo "Branch main (at fcac20f4be8c6d86c9cadc693c4712b07fbf879d) deployed as release 20210821204544 by emmanuelsarpong" >> /home/bitnami/apps/emmanuelsarpong/revisions.log as bitnami@3.99.18.191
+ DEBUG [e204792b] Command: cd /home/bitnami/apps/emmanuelsarpong/releases && /usr/bin/env echo "Branch main (at fcac20f4be8c6d86c9cadc693c4712b07fbf879d) deployed as release 20210821204544 by emmanuelsarpong" >> /home/bitnami/apps/emmanuelsarpong/revisions.log
+  INFO [e204792b] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [b53f982b] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/current'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [b53f982b] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/current'" 1>&2; false; fi
+ DEBUG [b53f982b] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [0ca4eb9b] Running [ -f /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ] as bitnami@3.99.18.191
+ DEBUG [0ca4eb9b] Command: [ -f /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ]
+ DEBUG [0ca4eb9b] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [8ad97692] Running /usr/bin/env kill -0 $( cat /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) as bitnami@3.99.18.191
+ DEBUG [8ad97692] Command: cd /home/bitnami/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /usr/bin/env kill -0 $( cat /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) )
+ DEBUG [8ad97692] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [2b7b2c79] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/bitnami/apps/emmanuelsarpong/shared/puma.rb restart as bitnami@3.99.18.191
+ DEBUG [2b7b2c79] Command: cd /home/bitnami/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/bitnami/apps/emmanuelsarpong/shared/puma.rb restart )
+ DEBUG [2b7b2c79] 	Command restart sent success
+  INFO [2b7b2c79] Finished in 1.535 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 17:29:59 -0400 cap production puma:config
+  INFO ---------------------------------------------------------------------------
+  INFO [60075370] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/ as bitnami@3.99.18.191
+ DEBUG [60075370] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/
+  INFO [60075370] Finished in 0.242 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [d165af57] Running /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as bitnami@3.99.18.191
+ DEBUG [d165af57] Command: /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [d165af57] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/bitnami/apps/emmanuelsarpong/shared/puma.rb 0.0%
+  INFO Uploading /home/bitnami/apps/emmanuelsarpong/shared/puma.rb 100.0%
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 17:31:00 -0400 cap production puma:nginx_config
+  INFO ---------------------------------------------------------------------------
+  INFO [019fbd8a] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/ as bitnami@3.99.18.191
+ DEBUG [019fbd8a] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/
+  INFO [019fbd8a] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [24ac43d8] Running /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as bitnami@3.99.18.191
+ DEBUG [24ac43d8] Command: /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [24ac43d8] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/nginx_emmanuelsarpong_production 0.0%
+  INFO Uploading /tmp/nginx_emmanuelsarpong_production 100.0%
+  INFO [d9f72135] Running /usr/bin/env sudo mv /tmp/nginx_emmanuelsarpong_production /etc/nginx/sites-available/emmanuelsarpong_production as bitnami@3.99.18.191
+ DEBUG [d9f72135] Command: /usr/bin/env sudo mv /tmp/nginx_emmanuelsarpong_production /etc/nginx/sites-available/emmanuelsarpong_production
+  INFO [d9f72135] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [242e6a3f] Running /usr/bin/env sudo ln -fs /etc/nginx/sites-available/emmanuelsarpong_production /etc/nginx/sites-enabled/emmanuelsarpong_production as bitnami@3.99.18.191
+ DEBUG [242e6a3f] Command: /usr/bin/env sudo ln -fs /etc/nginx/sites-available/emmanuelsarpong_production /etc/nginx/sites-enabled/emmanuelsarpong_production
+  INFO [242e6a3f] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 17:34:59 -0400 cap production puma:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [2a4b9b9d] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/ as bitnami@3.99.18.191
+ DEBUG [2a4b9b9d] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/
+  INFO [2a4b9b9d] Finished in 0.198 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [ed20b94d] Running /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as bitnami@3.99.18.191
+ DEBUG [ed20b94d] Command: /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [ed20b94d] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [47b0adfb] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/current'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [47b0adfb] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/current'" 1>&2; false; fi
+ DEBUG [47b0adfb] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [0adaa6da] Running [ -f /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ] as bitnami@3.99.18.191
+ DEBUG [0adaa6da] Command: [ -f /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ]
+ DEBUG [0adaa6da] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [8893f39a] Running /usr/bin/env kill -0 $( cat /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) as bitnami@3.99.18.191
+ DEBUG [8893f39a] Command: cd /home/bitnami/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /usr/bin/env kill -0 $( cat /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ) )
+ DEBUG [8893f39a] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [95ece4eb] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/bitnami/apps/emmanuelsarpong/shared/puma.rb restart as bitnami@3.99.18.191
+ DEBUG [95ece4eb] Command: cd /home/bitnami/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.state -F /home/bitnami/apps/emmanuelsarpong/shared/puma.rb restart )
+ DEBUG [95ece4eb] 	Command restart sent success
+  INFO [95ece4eb] Finished in 1.583 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-08-21 18:05:19 -0400 cap production puma:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [779e24c7] Running /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/ as bitnami@3.99.18.191
+ DEBUG [779e24c7] Command: /usr/bin/env mkdir -p /home/bitnami/apps/emmanuelsarpong/rvm1scripts/
+  INFO [779e24c7] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/emmanuelsarpong/.rvm/gems/ruby-2.6.6/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [fcd95dd8] Running /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh as bitnami@3.99.18.191
+ DEBUG [fcd95dd8] Command: /usr/bin/env chmod +x /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh
+  INFO [fcd95dd8] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [7613f4ca] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/current'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [7613f4ca] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/current'" 1>&2; false; fi
+ DEBUG [7613f4ca] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [0c2376ee] Running [ -f /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ] as bitnami@3.99.18.191
+ DEBUG [0c2376ee] Command: [ -f /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ]
+ DEBUG [0c2376ee] Finished in 0.061 seconds with exit status 1 (failed).
+ DEBUG [e17055b9] Running [ -f /home/bitnami/apps/emmanuelsarpong/shared/puma.rb ] as bitnami@3.99.18.191
+ DEBUG [e17055b9] Command: [ -f /home/bitnami/apps/emmanuelsarpong/shared/puma.rb ]
+ DEBUG [e17055b9] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO using conf file /home/bitnami/apps/emmanuelsarpong/shared/puma.rb
+ DEBUG [f4264442] Running [ -f /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ] as bitnami@3.99.18.191
+ DEBUG [f4264442] Command: [ -f /home/bitnami/apps/emmanuelsarpong/shared/tmp/pids/puma.pid ]
+ DEBUG [f4264442] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [0e8c1afe] Running if test ! -d /home/bitnami/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/current'" 1>&2; false; fi as bitnami@3.99.18.191
+ DEBUG [0e8c1afe] Command: if test ! -d /home/bitnami/apps/emmanuelsarpong/current; then echo "Directory does not exist '/home/bitnami/apps/emmanuelsarpong/current'" 1>&2; false; fi
+ DEBUG [0e8c1afe] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [951c7fea] Running /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec puma -C /home/bitnami/apps/emmanuelsarpong/shared/puma.rb --daemon as bitnami@3.99.18.191
+ DEBUG [951c7fea] Command: cd /home/bitnami/apps/emmanuelsarpong/current && ( export RACK_ENV="development" ; /home/bitnami/apps/emmanuelsarpong/rvm1scripts/rvm-auto.sh . bundle exec puma -C /home/bitnami/apps/emmanuelsarpong/shared/puma.rb --daemon )
+ DEBUG [951c7fea] 	Puma starting in single mode...
+ DEBUG [951c7fea] 	* Version 3.12.6 (ruby 2.6.6-p146), codename: Llamas in Pajamas
+ DEBUG [951c7fea] 	* Min threads: 0, max threads: 16
+ DEBUG [951c7fea] 	* Environment: development
+ DEBUG [951c7fea] 	* Daemonizing...
+  INFO [951c7fea] Finished in 2.499 seconds with exit status 0 (successful).
