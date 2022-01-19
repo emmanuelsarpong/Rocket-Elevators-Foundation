@@ -16,3 +16,5 @@ gem 'slack-ruby-client'
 
 REST API link: 
 git@github.com:emmanuelsarpong/Rocket_Elevators_REST_API.git
+
+Website link: http://rocketelevators.top
